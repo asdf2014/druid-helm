@@ -1,0 +1,12 @@
+dependencies:
+- name: zookeeper
+  repository: https://charts.helm.sh/incubator
+  version: 2.1.4
+- name: mysql
+  repository: https://charts.helm.sh/stable
+  version: 1.6.4
+- name: postgresql
+  repository: https://charts.helm.sh/stable
+  version: 8.6.4
+digest: sha256:fb2ab5eed4b4fc00eee5f23764209d7cb494a07161439ea28d85ed3741eaf7f7
+generated: "2024-02-27T11:45:47.766081+08:00"
