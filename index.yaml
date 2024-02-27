@@ -3,7 +3,7 @@ entries:
   druid:
   - apiVersion: v2
     appVersion: 24.0.0
-    created: "2024-02-26T22:46:55.524321+08:00"
+    created: "2024-02-27T16:53:59.621383+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -18,7 +18,7 @@ entries:
       repository: https://charts.helm.sh/stable
       version: 8.6.4
     description: Apache Druid is a high performance real-time analytics database.
-    digest: e47d6d89884431bc3ad2ca3c9feb90e944c804a93a080b1445dcd43d88092092
+    digest: 179aaab84bce854e457681c1199733c70420d75153cc972cf22c0a21fa7b85a1
     home: https://druid.apache.org/
     icon: https://druid.apache.org/img/favicon.png
     keywords:
@@ -29,6 +29,76 @@ entries:
     sources:
     - https://github.com/apache/druid
     urls:
-    - druid-0.3.6.tgz
-    version: 0.3.6
-generated: "2024-02-26T22:46:55.517238+08:00"
+    - druid-0.3.7.tgz
+    version: 0.3.7
+  mysql:
+  - apiVersion: v1
+    appVersion: 5.7.30
+    created: "2024-02-27T16:53:59.622311+08:00"
+    description: Fast, reliable, scalable, and easy to use open-source relational
+      database system.
+    digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
+    home: https://www.mysql.com/
+    icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+    keywords:
+    - mysql
+    - database
+    - sql
+    maintainers:
+    - email: o.with@sportradar.com
+      name: olemarkus
+    - email: viglesias@google.com
+      name: viglesiasce
+    name: mysql
+    sources:
+    - https://github.com/kubernetes/charts
+    - https://github.com/docker-library/mysql
+    urls:
+    - charts/mysql-1.6.4.tgz
+    version: 1.6.4
+  postgresql:
+  - apiVersion: v1
+    appVersion: 11.7.0
+    created: "2024-02-27T16:53:59.624259+08:00"
+    deprecated: true
+    description: DEPRECATED Chart for PostgreSQL, an object-relational database management
+      system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    digest: 00745b88e84403be696b7514c6e8c02710d81eb6074876b0700fa28fd47a9b43
+    home: https://www.postgresql.org/
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    urls:
+    - charts/postgresql-8.6.4.tgz
+    version: 8.6.4
+  zookeeper:
+  - apiVersion: v1
+    appVersion: 3.5.5
+    created: "2024-02-27T16:53:59.625577+08:00"
+    description: Centralized service for maintaining configuration information, naming,
+      providing distributed synchronization, and providing group services.
+    digest: 0df47968a5a5f66abb2fcd8b680c0a22f4e69019be9695bd282affc1e79ab14e
+    home: https://zookeeper.apache.org/
+    icon: https://zookeeper.apache.org/images/zookeeper_small.gif
+    kubeVersion: ^1.10.0-0
+    maintainers:
+    - email: lachlan.evenson@microsoft.com
+      name: lachie83
+    - email: owensk@google.com
+      name: kow3ns
+    name: zookeeper
+    sources:
+    - https://github.com/apache/zookeeper
+    - https://github.com/kubernetes/contrib/tree/master/statefulsets/zookeeper
+    urls:
+    - charts/zookeeper-2.1.4.tgz
+    version: 2.1.4
+generated: "2024-02-27T16:53:59.601205+08:00"
