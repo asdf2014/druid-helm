@@ -1,5 +1,6 @@
 .DS_Store
 .git/
 .gitignore
+.github/
 .idea/
 druid-*.tgz
