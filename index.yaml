@@ -3,7 +3,41 @@ entries:
   druid:
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-02-27T17:45:43.801225+08:00"
+    created: "2024-02-28T11:24:33.738758+08:00"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.helm.sh/incubator
+      version: 2.1.4
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.helm.sh/stable
+      version: 1.6.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.6.4
+    description: Apache Druid is a high performance real-time analytics database.
+    digest: 17b7b2cba9e15491e271ca7c2fe5cca3f57b95820cdd9fb74de6ee7d89dbce7c
+    home: https://druid.apache.org/
+    icon: https://druid.apache.org/img/favicon.png
+    keywords:
+    - olap
+    - database
+    - analytics
+    maintainers:
+    - email: asdf2014@apache.org
+      name: Benedict Jin
+      url: https://yuzhouwan.com/
+    name: druid
+    sources:
+    - https://github.com/apache/druid
+    urls:
+    - druid-29.0.1.tgz
+    version: 29.0.1
+  - apiVersion: v2
+    appVersion: 29.0.0
+    created: "2024-02-28T11:24:33.652308+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -34,7 +68,7 @@ entries:
   mysql:
   - apiVersion: v1
     appVersion: 5.7.30
-    created: "2024-02-27T17:45:43.802315+08:00"
+    created: "2024-02-28T11:24:33.739589+08:00"
     description: Fast, reliable, scalable, and easy to use open-source relational
       database system.
     digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
@@ -59,7 +93,7 @@ entries:
   postgresql:
   - apiVersion: v1
     appVersion: 11.7.0
-    created: "2024-02-27T17:45:43.804894+08:00"
+    created: "2024-02-28T11:24:33.741094+08:00"
     deprecated: true
     description: DEPRECATED Chart for PostgreSQL, an object-relational database management
       system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
@@ -82,7 +116,7 @@ entries:
   zookeeper:
   - apiVersion: v1
     appVersion: 3.5.5
-    created: "2024-02-27T17:45:43.806135+08:00"
+    created: "2024-02-28T11:24:33.742051+08:00"
     description: Centralized service for maintaining configuration information, naming,
       providing distributed synchronization, and providing group services.
     digest: 0df47968a5a5f66abb2fcd8b680c0a22f4e69019be9695bd282affc1e79ab14e
@@ -101,4 +135,4 @@ entries:
     urls:
     - charts/zookeeper-2.1.4.tgz
     version: 2.1.4
-generated: "2024-02-27T17:45:43.758912+08:00"
+generated: "2024-02-28T11:24:33.610986+08:00"
