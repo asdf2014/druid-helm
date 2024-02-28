@@ -25,7 +25,7 @@
 
 Before you install the Druid Chart, update the dependencies :
 ```bash
-helm dependency update helm/druid
+helm dependency update .
 ```
 
 ## Install Chart
@@ -33,7 +33,7 @@ helm dependency update helm/druid
 To install the Druid Chart into your Kubernetes cluster :
 
 ```bash
-helm install druid helm/druid --namespace dev --create-namespace
+helm install druid . --namespace dev --create-namespace
 ```
 
 After installation succeeds, you can get a status of Chart
