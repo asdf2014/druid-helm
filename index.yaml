@@ -3,7 +3,7 @@ entries:
   druid:
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-02-29T11:26:29.832278+08:00"
+    created: "2024-02-29T17:38:14.320115+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -34,11 +34,11 @@ entries:
     - https://github.com/apache/druid
     - https://github.com/asdf2014/druid-helm
     urls:
-    - druid-29.0.2.tgz
+    - releases/druid-29.0.2.tgz
     version: 29.0.2
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-02-29T11:26:29.825882+08:00"
+    created: "2024-02-29T17:38:14.312822+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -68,12 +68,12 @@ entries:
     sources:
     - https://github.com/apache/druid
     urls:
-    - druid-29.0.1.tgz
+    - releases/druid-29.0.1.tgz
     version: 29.0.1
   mysql:
   - apiVersion: v1
     appVersion: 5.7.30
-    created: "2024-02-29T11:26:29.834107+08:00"
+    created: "2024-02-29T17:38:14.301364+08:00"
     description: Fast, reliable, scalable, and easy to use open-source relational
       database system.
     digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
@@ -98,7 +98,7 @@ entries:
   postgresql:
   - apiVersion: v1
     appVersion: 11.7.0
-    created: "2024-02-29T11:26:29.836116+08:00"
+    created: "2024-02-29T17:38:14.303501+08:00"
     deprecated: true
     description: DEPRECATED Chart for PostgreSQL, an object-relational database management
       system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
@@ -121,7 +121,7 @@ entries:
   zookeeper:
   - apiVersion: v1
     appVersion: 3.5.5
-    created: "2024-02-29T11:26:29.837335+08:00"
+    created: "2024-02-29T17:38:14.306482+08:00"
     description: Centralized service for maintaining configuration information, naming,
       providing distributed synchronization, and providing group services.
     digest: 0df47968a5a5f66abb2fcd8b680c0a22f4e69019be9695bd282affc1e79ab14e
@@ -140,4 +140,4 @@ entries:
     urls:
     - charts/zookeeper-2.1.4.tgz
     version: 2.1.4
-generated: "2024-02-29T11:26:29.817254+08:00"
+generated: "2024-02-29T17:38:14.300195+08:00"
