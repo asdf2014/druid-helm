@@ -64,12 +64,12 @@ This Helm automatically prefixes all names using the release name to avoid colli
 
 This chart exposes 6 endpoints:
 
-- Druid Overlord
-- Druid Broker
-- Druid Coordinator
-- Druid Historical
-- Druid Middle Manager
 - Druid Router
+- Druid Broker
+- Druid Overlord
+- Druid Coordinator
+- Druid Middle Manager
+- Druid Historical
 
 ### Druid configuration
 
@@ -77,22 +77,22 @@ Druid configuration can be changed by using environment variables from Docker im
 
 See the
 [Druid Docker entry point](https://github.com/apache/druid/blob/master/distribution/docker/druid.sh)
-for more informations
+for more information.
 
-### Middle Manager and Historical Statefulset
+### MiddleManager and Historical StatefulSet
 
-Middle Managers and Historicals uses StatefulSet. Persistence is enabled by default.
+MiddleManagers and Historicals use StatefulSet. Persistence has been enabled by default.
 
 ## Helm chart Configuration
 
-The following table lists the configurable parameters of the Druid chart and their default values.
+The following table lists the configurable parameters of the Druid Helm Chart and their default values.
 
 | Parameter                                                   | Description                                              | Default                                                      |
 | ----------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
 | `image.repository`                                          | container image name                                     | `apache/druid`                                               |
 | `image.tag`                                                 | container image tag                                      | `29.0.0`                                                     |
 | `image.pullPolicy`                                          | container pull policy                                    | `IfNotPresent`                                               |
-| `image.pullSecrets`                                         | image pull secrest for private repositoty                | `[]`                                                         |
+| `image.pullSecrets`                                         | image pull secrets for private repository                | `[]`                                                         |
 | `configMap.enabled`                                         | enable druid configuration as configmap                  | `true`                                                       |
 | `configVars`                                                | druid configuration variables for all components         | ``                                                           |
 | `gCloudStorage.enabled`                                     | look for secret to set google cloud credentials          | `false`                                                      |
