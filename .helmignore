@@ -3,4 +3,5 @@
 .gitignore
 .github/
 .idea/
+releases/
 druid-*.tgz
