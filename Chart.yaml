@@ -15,7 +15,7 @@
 
 apiVersion: v2
 name: druid
-version: 29.0.2
+version: 29.0.3
 appVersion: 29.0.0
 description: Apache Druid is a high performance real-time analytics database.
 keywords:
@@ -44,3 +44,10 @@ maintainers:
     email: asdf2014@apache.org
     url: https://yuzhouwan.com/
 icon: https://druid.apache.org/img/favicon.png
+annotations:
+  "artifacthub.io/license": Apache-2.0
+  "artifacthub.io/links": |
+    - name: Upstream Project
+      url: https://github.com/apache/druid
+    - name: Chart Source
+      url: https://github.com/asdf2014/druid-helm
