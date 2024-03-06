@@ -21,46 +21,63 @@
 
 [Apache Druid](https://druid.apache.org/) is a high performance real-time analytics database.
 
-## Dependency Update
+
+
+## Quick Start
+
+[Apache Druid Helm Chart](https://github.com/asdf2014/druid-helm) can be used to deploy a Druid cluster on Kubernetes with following commands:
+
+```bash
+# Add repository
+$ helm repo add druid-helm https://asdf2014.github.io/druid-helm/
+
+# Install chart
+$ helm install my-druid druid-helm/druid --version 29.0.4
+```
+
+
+
+## Install Local Chart
 
 Before you install the [Druid Chart](https://github.com/asdf2014/druid-helm), update the dependencies:
 
 ```bash
-helm dependency update .
+$ helm dependency update .
 ```
-
-## Install Chart
 
 To install the Druid Chart into your Kubernetes cluster:
 
 ```bash
-helm install druid . --namespace dev --create-namespace
+$ helm install druid . --namespace dev --create-namespace
 ```
 
 After installation succeeds, you can get a status of Chart
 
 ```bash
-helm status druid -n dev 
+$ helm status druid -n dev 
 ```
 
 If you want to delete your Chart, use this command:
 
 ```bash
-helm uninstall druid -n dev
+$ helm uninstall druid -n dev
 ```
 
-### Helm ingresses
 
-The Chart provides ingress configuration to allow customization the installation by adapting 
-the `values.yaml` depending on your setup.
-Please read the comments in the `values.yaml` file for more details on how to configure your 
-reverse proxy or load balancer.
 
-### Chart Prefix
+## Helm ingresses
+
+The Chart provides ingress configuration to allow customization the installation by adapting the `values.yaml` depending on your setup. Please read the comments in the `values.yaml` file for more details on how to configure your reverse proxy or load balancer.
+
+
+
+## Chart Prefix
 
 This Helm automatically prefixes all names using the release name to avoid collisions.
 
-### URL prefix
+
+
+## URL prefix
 
 This chart exposes 6 endpoints:
 
@@ -71,17 +88,21 @@ This chart exposes 6 endpoints:
 - Druid Middle Manager
 - Druid Historical
 
-### Druid configuration
+
+
+## Druid configuration
 
 Druid configuration can be changed by using environment variables from Docker image.
 
-See the
-[Druid Docker entry point](https://github.com/apache/druid/blob/master/distribution/docker/druid.sh)
-for more information.
+See the [Druid Docker entry point](https://github.com/apache/druid/blob/master/distribution/docker/druid.sh) for more information.
 
-### MiddleManager and Historical StatefulSet
+
+
+## MiddleManager and Historical StatefulSet
 
 MiddleManagers and Historicals use StatefulSet. Persistence has been enabled by default.
+
+
 
 ## Helm chart Configuration
 
