@@ -17,7 +17,7 @@
   ~ under the License.
   -->
 
-# Apache Druid
+# Helm Chart for Apache Druid
 
 ## Quick Start
 
