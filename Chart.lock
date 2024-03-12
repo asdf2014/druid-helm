@@ -1,12 +1,12 @@
 dependencies:
 - name: zookeeper
   repository: https://charts.bitnami.com/bitnami
-  version: 12.11.1
+  version: 12.12.0
 - name: mysql
   repository: https://charts.helm.sh/stable
   version: 1.6.4
 - name: postgresql
   repository: https://charts.helm.sh/stable
   version: 8.6.4
-digest: sha256:db8782d98df4071e1e0a6da6fce223501d3cf940d0b8b56881e289add6fccc48
-generated: "2024-03-05T11:32:47.950385+08:00"
+digest: sha256:ad94b4756b83d0be7614132078cd42dcc7f553d0985115a917def4cac73747b7
+generated: "2024-03-12T11:07:57.173336+08:00"
