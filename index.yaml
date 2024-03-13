@@ -10,7 +10,49 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-12T11:08:42.934242+08:00"
+    created: "2024-03-13T11:22:11.941857+08:00"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.0
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.helm.sh/stable
+      version: 1.6.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.3.3
+    description: Apache Druid is a high performance real-time analytics database.
+    digest: 9e0b8bd2f09bb8610c7331069e74206873d6cd05b471d4ff3cd01030ddac057f
+    home: https://druid.apache.org/
+    icon: https://druid.apache.org/img/favicon.png
+    keywords:
+    - olap
+    - database
+    - analytics
+    maintainers:
+    - email: asdf2014@apache.org
+      name: Benedict Jin
+      url: https://yuzhouwan.com/
+    name: druid
+    sources:
+    - https://github.com/apache/druid
+    - https://github.com/asdf2014/druid-helm
+    urls:
+    - druid-29.0.6.tgz
+    version: 29.0.6
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Upstream Project
+          url: https://github.com/apache/druid
+        - name: Chart Source
+          url: https://github.com/asdf2014/druid-helm
+    apiVersion: v2
+    appVersion: 29.0.0
+    created: "2024-03-13T11:22:11.990577+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -52,7 +94,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-12T11:08:42.925962+08:00"
+    created: "2024-03-13T11:22:11.982895+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -94,7 +136,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-12T11:08:42.916656+08:00"
+    created: "2024-03-13T11:22:11.975181+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -129,7 +171,7 @@ entries:
     version: 29.0.3
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-12T11:08:42.908661+08:00"
+    created: "2024-03-13T11:22:11.967803+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -164,7 +206,7 @@ entries:
     version: 29.0.2
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-12T11:08:42.901613+08:00"
+    created: "2024-03-13T11:22:11.961176+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -199,7 +241,7 @@ entries:
   mysql:
   - apiVersion: v1
     appVersion: 5.7.30
-    created: "2024-03-12T11:08:42.88739+08:00"
+    created: "2024-03-13T11:22:11.942933+08:00"
     description: Fast, reliable, scalable, and easy to use open-source relational
       database system.
     digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
@@ -222,15 +264,31 @@ entries:
     - charts/mysql-1.6.4.tgz
     version: 1.6.4
   postgresql:
-  - apiVersion: v1
-    appVersion: 11.7.0
-    created: "2024-03-12T11:08:42.889638+08:00"
-    deprecated: true
-    description: DEPRECATED Chart for PostgreSQL, an object-relational database management
-      system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
-    digest: 00745b88e84403be696b7514c6e8c02710d81eb6074876b0700fa28fd47a9b43
-    home: https://www.postgresql.org/
-    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+  - annotations:
+      category: Database
+      images: |
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r16
+        - name: postgres-exporter
+          image: docker.io/bitnami/postgres-exporter:0.15.0-debian-12-r14
+        - name: postgresql
+          image: docker.io/bitnami/postgresql:16.2.0-debian-12-r8
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 16.2.0
+    created: "2024-03-13T11:22:11.9504+08:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: 9e1cd8fcf98bd109086a1c4a45d56136de1ecaa5665767229230d1d614b06132
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
     keywords:
     - postgresql
     - postgres
@@ -238,12 +296,15 @@ entries:
     - sql
     - replication
     - cluster
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
     name: postgresql
     sources:
-    - https://github.com/bitnami/bitnami-docker-postgresql
+    - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
     urls:
-    - charts/postgresql-8.6.4.tgz
-    version: 8.6.4
+    - charts/postgresql-14.3.3.tgz
+    version: 14.3.3
   zookeeper:
   - annotations:
       category: Infrastructure
@@ -255,7 +316,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.9.1
-    created: "2024-03-12T11:08:42.89399+08:00"
+    created: "2024-03-13T11:22:11.953757+08:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -278,4 +339,4 @@ entries:
     urls:
     - charts/zookeeper-12.12.0.tgz
     version: 12.12.0
-generated: "2024-03-12T11:08:42.886107+08:00"
+generated: "2024-03-13T11:22:11.929017+08:00"
