@@ -19,8 +19,10 @@ version: 29.0.6
 appVersion: 29.0.0
 description: Apache Druid is a high performance real-time analytics database.
 keywords:
-  - olap
+  - bigdata
   - database
+  - tsdb
+  - olap
   - analytics
 home: https://druid.apache.org/
 sources:
