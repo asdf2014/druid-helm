@@ -449,20 +449,20 @@ router:
   podAnnotations: {}
 
 # ------------------------------------------------------------------------------
-# Zookeeper:
+# ZooKeeper:
 # ------------------------------------------------------------------------------
 
-# If using a zookeeper installed outside of this chart you must uncomment and set this line
+# If using a ZooKeeper installed outside of this chart you must uncomment and set this line
 # zkHosts: druid-zookeeper-headless:2181
 
 zookeeper:
   enabled: true
-  ## Environmental variables to set in Zookeeper
+  ## Environmental variables to set in ZooKeeper
   ##
   env:
-    ## The JVM heap size to allocate to Zookeeper
+    ## The JVM heap size to allocate to ZooKeeper
     ZK_HEAP_SIZE: "512M"
-  ## Configure Zookeeper headless
+  ## Configure ZooKeeper headless
   headless:
     publishNotReadyAddresses: true
 
@@ -482,7 +482,7 @@ mysql:
       collation-server=utf8_unicode_ci
 
 # ------------------------------------------------------------------------------
-# postgres:
+# PostgreSQL:
 # ------------------------------------------------------------------------------
 postgresql:
   enabled: true
@@ -495,7 +495,7 @@ postgresql:
 # Secrets
 prometheus:
   enabled: false
-  #pick the any port what you want
+  # pick the any port what you want
   port: 9090
   annotation:
     prometheus.io/scrape: "true"
