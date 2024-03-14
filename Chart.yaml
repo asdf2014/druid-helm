@@ -26,6 +26,8 @@ home: https://druid.apache.org/
 sources:
   - https://github.com/apache/druid
   - https://github.com/asdf2014/druid-helm
+  - https://imply.io/resources/blog/
+  - https://yuzhouwan.com/posts/5845/
 dependencies:
   - name: zookeeper
     version: 12.12.0
@@ -51,3 +53,7 @@ annotations:
       url: https://github.com/apache/druid
     - name: Chart Source
       url: https://github.com/asdf2014/druid-helm
+    - name: Druid Blog in English
+      url: https://imply.io/resources/blog/
+    - name: Druid Blog in Chinese
+      url: https://yuzhouwan.com/posts/5845/
