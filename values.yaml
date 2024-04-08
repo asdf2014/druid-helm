@@ -486,9 +486,10 @@ mysql:
 # ------------------------------------------------------------------------------
 postgresql:
   enabled: true
-  postgresqlUsername: druid
-  postgresqlPassword: druid
-  postgresqlDatabase: druid
+  auth:
+    username: druid
+    password: druid
+    database: druid
   service:
     port: 5432
 
