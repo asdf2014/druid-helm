@@ -13,8 +13,58 @@ entries:
         - name: Druid Blog in Chinese
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
+    appVersion: 29.0.1
+    created: "2024-04-08T11:54:58.835071+08:00"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.0
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.helm.sh/stable
+      version: 1.6.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.3.3
+    description: Apache Druid is a high performance real-time analytics database.
+    digest: 7f91d05216b480282fad80423a57c6f3e762e9d32ab93879f9b7981e83b65e8c
+    home: https://druid.apache.org/
+    icon: https://druid.apache.org/img/favicon.png
+    keywords:
+    - bigdata
+    - database
+    - tsdb
+    - olap
+    - analytics
+    maintainers:
+    - email: asdf2014@apache.org
+      name: Benedict Jin
+      url: https://yuzhouwan.com/
+    name: druid
+    sources:
+    - https://github.com/apache/druid
+    - https://github.com/asdf2014/druid-helm
+    - https://imply.io/resources/blog/
+    - https://yuzhouwan.com/posts/5845/
+    urls:
+    - releases/druid-29.1.0.tgz
+    version: 29.1.0
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Upstream Project
+          url: https://github.com/apache/druid
+        - name: Chart Source
+          url: https://github.com/asdf2014/druid-helm
+        - name: Druid Blog in English
+          url: https://imply.io/resources/blog/
+        - name: Druid Blog in Chinese
+          url: https://yuzhouwan.com/posts/5845/
+    apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-14T15:31:21.063115+08:00"
+    created: "2024-04-08T11:54:58.82491+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -60,7 +110,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-14T15:31:21.053723+08:00"
+    created: "2024-04-08T11:54:58.813828+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -102,7 +152,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-14T15:31:21.041445+08:00"
+    created: "2024-04-08T11:54:58.801854+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -144,7 +194,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-14T15:31:21.033547+08:00"
+    created: "2024-04-08T11:54:58.792628+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -186,7 +236,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-14T15:31:21.025871+08:00"
+    created: "2024-04-08T11:54:58.78054+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -221,7 +271,7 @@ entries:
     version: 29.0.3
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-14T15:31:21.019744+08:00"
+    created: "2024-04-08T11:54:58.773995+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -256,7 +306,7 @@ entries:
     version: 29.0.2
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-03-14T15:31:21.012943+08:00"
+    created: "2024-04-08T11:54:58.764917+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -291,7 +341,7 @@ entries:
   mysql:
   - apiVersion: v1
     appVersion: 5.7.30
-    created: "2024-03-14T15:31:20.995662+08:00"
+    created: "2024-04-08T11:54:58.74136+08:00"
     description: Fast, reliable, scalable, and easy to use open-source relational
       database system.
     digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
@@ -326,7 +376,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 16.2.0
-    created: "2024-03-14T15:31:21.003632+08:00"
+    created: "2024-04-08T11:54:58.752081+08:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -366,7 +416,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.9.1
-    created: "2024-03-14T15:31:21.006935+08:00"
+    created: "2024-04-08T11:54:58.756266+08:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -389,4 +439,4 @@ entries:
     urls:
     - charts/zookeeper-12.12.0.tgz
     version: 12.12.0
-generated: "2024-03-14T15:31:20.994262+08:00"
+generated: "2024-04-08T11:54:58.737922+08:00"
