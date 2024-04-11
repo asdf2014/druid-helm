@@ -47,6 +47,9 @@ maintainers:
   - name: Benedict Jin
     email: asdf2014@apache.org
     url: https://yuzhouwan.com/
+  - name: Sensor
+    email: fectrain@outlook.com
+    url: https://github.com/fectrain
 icon: https://druid.apache.org/img/favicon.png
 annotations:
   "artifacthub.io/license": Apache-2.0
