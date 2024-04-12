@@ -173,7 +173,7 @@ coordinator:
 overlord:
   ## If true, the separate overlord will be installed
   ##
-  enabled: false
+  enabled: true
   name: overlord
   replicaCount: 1
   port: 8081
@@ -371,7 +371,7 @@ middleManager:
     #   memory: 256Mi
 
   serviceAccount:
-    # -- Create a service account for the overlord
+    # -- Create a service account for the middleManager
     create: true
     # -- Service Account name
     name:
@@ -429,7 +429,7 @@ router:
     #   memory: 128Mi
 
   serviceAccount:
-    # -- Create a service account for the overlord
+    # -- Create a service account for the router
     create: true
     # -- Service Account name
     name:
