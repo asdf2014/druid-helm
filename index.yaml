@@ -14,7 +14,60 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-04-15T15:46:46.483422+08:00"
+    created: "2024-04-18T11:00:32.512379+08:00"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.1
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.helm.sh/stable
+      version: 1.6.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.5
+    description: Apache Druid is a high performance real-time analytics database.
+    digest: 975f8939077f6bc413a5a193c13791f5b35c0dd0aaa88581c1cf74f116d8ba95
+    home: https://druid.apache.org/
+    icon: https://druid.apache.org/img/favicon.png
+    keywords:
+    - bigdata
+    - database
+    - tsdb
+    - olap
+    - analytics
+    maintainers:
+    - email: asdf2014@apache.org
+      name: Benedict Jin
+      url: https://yuzhouwan.com/
+    - email: fectrain@outlook.com
+      name: Sensor
+      url: https://github.com/fectrain
+    name: druid
+    sources:
+    - https://github.com/apache/druid
+    - https://github.com/asdf2014/druid-helm
+    - https://imply.io/resources/blog/
+    - https://yuzhouwan.com/posts/5845/
+    urls:
+    - releases/druid-29.1.3.tgz
+    version: 29.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Upstream Project
+          url: https://github.com/apache/druid
+        - name: Chart Source
+          url: https://github.com/asdf2014/druid-helm
+        - name: Druid Blog in English
+          url: https://imply.io/resources/blog/
+        - name: Druid Blog in Chinese
+          url: https://yuzhouwan.com/posts/5845/
+    apiVersion: v2
+    appVersion: 29.0.1
+    created: "2024-04-18T11:00:32.502807+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -67,7 +120,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-04-15T15:46:46.473946+08:00"
+    created: "2024-04-18T11:00:32.49238+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -117,7 +170,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-04-15T15:46:46.46424+08:00"
+    created: "2024-04-18T11:00:32.479882+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -167,7 +220,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-04-15T15:46:46.454546+08:00"
+    created: "2024-04-18T11:00:32.467315+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -213,7 +266,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-04-15T15:46:46.444418+08:00"
+    created: "2024-04-18T11:00:32.454929+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -255,7 +308,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-04-15T15:46:46.435034+08:00"
+    created: "2024-04-18T11:00:32.440918+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -297,7 +350,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-04-15T15:46:46.427126+08:00"
+    created: "2024-04-18T11:00:32.431769+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -339,7 +392,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-04-15T15:46:46.419065+08:00"
+    created: "2024-04-18T11:00:32.421969+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -374,7 +427,7 @@ entries:
     version: 29.0.3
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-04-15T15:46:46.413329+08:00"
+    created: "2024-04-18T11:00:32.415391+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -409,7 +462,7 @@ entries:
     version: 29.0.2
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-04-15T15:46:46.405387+08:00"
+    created: "2024-04-18T11:00:32.407464+08:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -444,7 +497,7 @@ entries:
   mysql:
   - apiVersion: v1
     appVersion: 5.7.30
-    created: "2024-04-15T15:46:46.388884+08:00"
+    created: "2024-04-18T11:00:32.39022+08:00"
     description: Fast, reliable, scalable, and easy to use open-source relational
       database system.
     digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
@@ -471,15 +524,15 @@ entries:
       category: Database
       images: |
         - name: os-shell
-          image: docker.io/bitnami/os-shell:12-debian-12-r16
+          image: docker.io/bitnami/os-shell:12-debian-12-r18
         - name: postgres-exporter
-          image: docker.io/bitnami/postgres-exporter:0.15.0-debian-12-r14
+          image: docker.io/bitnami/postgres-exporter:0.15.0-debian-12-r16
         - name: postgresql
-          image: docker.io/bitnami/postgresql:16.2.0-debian-12-r8
+          image: docker.io/bitnami/postgresql:16.2.0-debian-12-r15
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 16.2.0
-    created: "2024-04-15T15:46:46.394923+08:00"
+    created: "2024-04-18T11:00:32.396594+08:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -489,7 +542,7 @@ entries:
     description: PostgreSQL (Postgres) is an open source object-relational database
       known for reliability and data integrity. ACID-compliant, it supports foreign
       keys, joins, views, triggers and stored procedures.
-    digest: 9e1cd8fcf98bd109086a1c4a45d56136de1ecaa5665767229230d1d614b06132
+    digest: 8c558e2a490332a992d0fc6bafdb0eb9f1a490a775129a88e916f7b9154fcff3
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
     keywords:
@@ -506,8 +559,8 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
     urls:
-    - charts/postgresql-14.3.3.tgz
-    version: 14.3.3
+    - charts/postgresql-15.2.5.tgz
+    version: 15.2.5
   zookeeper:
   - annotations:
       category: Infrastructure
@@ -519,7 +572,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.9.2
-    created: "2024-04-15T15:46:46.398425+08:00"
+    created: "2024-04-18T11:00:32.40002+08:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -542,4 +595,4 @@ entries:
     urls:
     - charts/zookeeper-12.12.1.tgz
     version: 12.12.1
-generated: "2024-04-15T15:46:46.387579+08:00"
+generated: "2024-04-18T11:00:32.388627+08:00"
