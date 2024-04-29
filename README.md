@@ -28,7 +28,7 @@
 $ helm repo add druid-helm https://asdf2014.github.io/druid-helm/
 
 # Install chart
-$ helm install my-druid druid-helm/druid --version 29.1.3
+$ helm install my-druid druid-helm/druid --version 29.1.4
 ```
 
 
@@ -254,6 +254,16 @@ The following table lists the configurable parameters of the Druid Helm Chart an
 | `historical.ingress.path`                                | path of the historical api                               | `/`                              |
 | `historical.ingress.annotations`                         | annotations for the historical api ingress               | `{}`                             |
 | `historical.ingress.tls`                                 | TLS configuration for the ingress                        | `[]`                             |
+
+### PostgreSQL
+
+| Parameter                  | Description             | Default |
+| -------------------------- | ----------------------- | ------- |
+| `postgresql.enabled`       | enable PostgreSQL       | `true`  |
+| `postgresql.auth.username` | PostgreSQL username     | `druid` |
+| `postgresql.auth.password` | PostgreSQL password     | `druid` |
+| `postgresql.auth.database` | PostgreSQL database     | `druid` |
+| `postgresql.service.port`  | PostgreSQL service port | `5432`  |
 
 ### Prometheus
 
