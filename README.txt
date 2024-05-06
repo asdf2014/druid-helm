@@ -85,7 +85,7 @@ The following table lists the configurable parameters of the Druid Helm Chart an
 
 | Parameter                                            | Description                                       | Default                          |
 | ---------------------------------------------------- | ------------------------------------------------- | -------------------------------- |
-| `router.enabled`                                     | enable router                                     | `false`                          |
+| `router.enabled`                                     | enable router                                     | `true`                           |
 | `router.name`                                        | router component name                             | `router`                         |
 | `router.replicaCount`                                | router node replicas (deployment)                 | `1`                              |
 | `router.port`                                        | port of router component                          | `8888`                           |
@@ -137,7 +137,7 @@ The following table lists the configurable parameters of the Druid Helm Chart an
 
 | Parameter                                              | Description                                       | Default                          |
 | ------------------------------------------------------ | ------------------------------------------------- | -------------------------------- |
-| `overlord.enabled`                                     | enable overlord                                   | `false`                          |
+| `overlord.enabled`                                     | enable overlord                                   | `true`                           |
 | `overlord.name`                                        | overlord component name                           | `overlord`                       |
 | `overlord.replicaCount`                                | overlord node replicas (deployment)               | `1`                              |
 | `overlord.port`                                        | port of overlord component                        | `8081`                           |
