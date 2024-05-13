@@ -109,9 +109,21 @@ broker:
 
   nodeSelector: {}
 
-  tolerations: []
+  tolerations: 
+    - key: dev
+      operator: Equal
+      value: 'yes'
+      effect: NoSchedule
 
-  affinity: {}
+  affinity: 
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.azure.com/agentpool
+                operator: In
+                values:
+                  - testd8
 
   podAnnotations: {}
 
@@ -164,9 +176,21 @@ coordinator:
 
   nodeSelector: {}
 
-  tolerations: []
-
-  affinity: {}
+  tolerations: 
+    - key: dev
+      operator: Equal
+      value: 'yes'
+      effect: NoSchedule
+      
+  affinity: 
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.azure.com/agentpool
+                operator: In
+                values:
+                  - testd8
 
   podAnnotations: {}
 
@@ -210,9 +234,21 @@ overlord:
 
   nodeSelector: {}
 
-  tolerations: []
-
-  affinity: {}
+  tolerations: 
+    - key: dev
+      operator: Equal
+      value: 'yes'
+      effect: NoSchedule
+      
+  affinity: 
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.azure.com/agentpool
+                operator: In
+                values:
+                  - testd8
 
   podAnnotations: {}
 
@@ -256,14 +292,25 @@ historical:
 
   antiAffinity: "soft"
 
-  nodeAffinity: {}
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.azure.com/agentpool
+                operator: In
+                values:
+                  - testd8
 
   nodeSelector: {}
 
   securityContext:
     fsGroup: 1000
 
-  tolerations: []
+  tolerations: 
+    - key: dev
+      operator: Equal
+      value: 'yes'
+      effect: NoSchedule
 
   resources: {}
     # limits:
@@ -353,14 +400,25 @@ middleManager:
 
   antiAffinity: "soft"
 
-  nodeAffinity: {}
+  nodeAffinity: 
+    requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.azure.com/agentpool
+                operator: In
+                values:
+                  - testd8
 
   nodeSelector: {}
 
   securityContext:
     fsGroup: 1000
 
-  tolerations: []
+  tolerations:
+    - key: dev
+      operator: Equal
+      value: 'yes'
+      effect: NoSchedule
 
   resources: {}
     # limits:
@@ -442,9 +500,21 @@ router:
 
   nodeSelector: {}
 
-  tolerations: []
-
-  affinity: {}
+  tolerations: 
+    - key: dev
+      operator: Equal
+      value: 'yes'
+      effect: NoSchedule
+      
+  affinity: 
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.azure.com/agentpool
+                operator: In
+                values:
+                  - testd8
 
   podAnnotations: {}
 
