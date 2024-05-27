@@ -299,6 +299,58 @@ historical:
   updateStrategy:
     type: RollingUpdate
 
+  ## If tiered historical is set to true, please refer to the information under 'tierData' for customisation of historical.
+  ## All data given above would be overridden by the information in 'tierData' unless not specified.
+  tiers: true
+
+  ## The following will be effective only when tiers are enabled
+  tierData:
+    - name: default
+      replicas: 1
+      nodeSelector: {}
+      tolerations: []
+      resources: {}
+        # limits:
+        #   cpu: 2
+        #   memory: 2Gi
+        # requests:
+        #   cpu: 500m
+        #   memory: 512Mi
+      config:
+        DRUID_XMX: 512m
+        DRUID_XMS: 512m
+        DRUID_MAXDIRECTMEMORYSIZE: 400m
+        druid_processing_buffer_sizeBytes: '50000000'
+        druid_processing_numMergeBuffers: 2
+        druid_processing_numThreads: 1
+        # druid_monitoring_monitors: '["org.apache.druid.client.cache.CacheMonitor", "org.apache.druid.server.metrics.HistoricalMetricsMonitor", "org.apache.druid.server.metrics.QueryCountStatsMonitor"]'
+        # druid_segmentCache_locations: '[{"path":"/opt/druid/var/druid/segment-cache","maxSize":300000000000}]'
+        druid_server_tier: default
+        druid_server_priority: 0
+    - name: hot
+      replicas: 1
+      nodeSelector: {}
+      tolerations: []
+      resources: {}
+        # limits:
+        #   cpu: 2
+        #   memory: 2Gi
+        # requests:
+        #   cpu: 500m
+        #   memory: 512Mi
+      config:
+        DRUID_XMX: 512m
+        DRUID_XMS: 512m
+        DRUID_MAXDIRECTMEMORYSIZE: 400m
+        druid_processing_buffer_sizeBytes: '50000000'
+        druid_processing_numMergeBuffers: 2
+        druid_processing_numThreads: 1
+        # druid_monitoring_monitors: '["org.apache.druid.client.cache.CacheMonitor", "org.apache.druid.server.metrics.HistoricalMetricsMonitor", "org.apache.druid.server.metrics.QueryCountStatsMonitor"]'
+        # druid_segmentCache_locations: '[{"path":"/opt/druid/var/druid/segment-cache","maxSize":300000000000}]'
+        druid_server_tier: hot
+        druid_server_priority: 1
+        
+
 middleManager:
   ## If false, middleManager will not be installed
   ##
