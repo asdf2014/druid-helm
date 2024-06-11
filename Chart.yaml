@@ -15,7 +15,7 @@
 
 apiVersion: v2
 name: druid
-version: 29.1.7
+version: 29.1.8
 appVersion: 29.0.1
 description: Apache Druid is a high performance real-time analytics database.
 keywords:
@@ -32,7 +32,7 @@ sources:
   - https://yuzhouwan.com/posts/5845/
 dependencies:
   - name: zookeeper
-    version: 12.12.1
+    version: 13.4.3
     repository: https://charts.bitnami.com/bitnami
     condition: zookeeper.enabled
   - name: mysql
