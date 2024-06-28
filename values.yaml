@@ -301,7 +301,7 @@ historical:
 
   ## If tiered historical is set to true, please refer to the information under 'tierData' for customisation of historical.
   ## All data given above would be overridden by the information in 'tierData' unless not specified.
-  tiers: true
+  tiers: false
 
   ## The following will be effective only when tiers are enabled
   tierData:
