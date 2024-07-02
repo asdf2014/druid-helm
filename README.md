@@ -72,7 +72,7 @@ The following table lists the configurable parameters of the Druid Helm Chart an
 | Parameter                  | Description                                          | Default        |
 | -------------------------- | ---------------------------------------------------- | -------------- |
 | `image.repository`         | container image name                                 | `apache/druid` |
-| `image.tag`                | container image tag                                  | `29.0.1`       |
+| `image.tag`                | container image tag                                  | `30.0.0`       |
 | `image.pullPolicy`         | container pull policy                                | `IfNotPresent` |
 | `image.pullSecrets`        | image pull secrets for private repository            | `[]`           |
 | `configMap.enabled`        | enable druid configuration as configmap              | `true`         |
