@@ -32,7 +32,7 @@
   export SERVICE_IP=$(kubectl get svc --namespace {{ .Release.Namespace }} {{ include "druid.fullname" . }} -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
   echo http://$SERVICE_IP:{{ .Values.router.port }}
 {{- else if contains "ClusterIP" .Values.router.serviceType }}
-  export POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app={{ include "druid.name" . }},release={{ .Release.Name }}" --no-headers -o custom-columns=":metadata.name" | grep "^my-druid-router")
+  export POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app={{ include "druid.name" . }},release={{ .Release.Name }}" --no-headers -o custom-columns=":metadata.name" | grep "router")
   echo "Visit http://127.0.0.1:8888 to use your application"
   kubectl port-forward $POD_NAME 8888:{{ .Values.router.port }}
 {{- end }}
