@@ -1,0 +1,1221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Druid Helm Chart Values Schema",
+  "type": "object",
+  "properties": {
+    "image": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "default": "apache/druid",
+          "description": "container image name"
+        },
+        "tag": {
+          "type": "string",
+          "default": "30.0.0",
+          "description": "container image tag"
+        },
+        "pullPolicy": {
+          "type": "string",
+          "default": "IfNotPresent",
+          "description": "container pull policy"
+        },
+        "pullSecrets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "image pull secrets for private repository"
+        }
+      },
+      "required": ["repository", "tag", "pullPolicy"]
+    },
+    "configMap": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable druid configuration as configmap"
+        }
+      }
+    },
+    "configVars": {
+      "type": "object",
+      "description": "druid configuration variables for all components"
+    },
+    "gCloudStorage": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "look for secret to set google cloud credentials"
+        },
+        "secretName": {
+          "type": "string",
+          "description": "secretName to be mounted as google cloud credentials"
+        }
+      }
+    },
+    "rbac": {
+      "type": "object",
+      "properties": {
+        "create": {
+          "type": "boolean",
+          "default": true,
+          "description": "Create roles and roleBindings for service Accounts"
+        }
+      }
+    },
+    "router": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable router"
+        },
+        "name": {
+          "type": "string",
+          "default": "router",
+          "description": "router component name"
+        },
+        "replicaCount": {
+          "type": "integer",
+          "default": 1,
+          "description": "router node replicas (deployment)"
+        },
+        "port": {
+          "type": "integer",
+          "default": 8888,
+          "description": "port of router component"
+        },
+        "serviceType": {
+          "type": "string",
+          "default": "ClusterIP",
+          "description": "service type for service"
+        },
+        "serviceAccount": {
+          "type": "object",
+          "properties": {
+            "create": {
+              "type": "boolean",
+              "default": true,
+              "description": "Create a service account for router service"
+            },
+            "name": {
+              "type": "string",
+              "description": "Service account name"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Annotations applied to created service account"
+            },
+            "labels": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Labels applied to created service account"
+            },
+            "automountServiceAccountToken": {
+              "type": "boolean",
+              "default": true,
+              "description": "Automount API credentials for the Service Account"
+            }
+          }
+        },
+        "resources": {
+          "type": "object",
+          "description": "router node resources requests & limits"
+        },
+        "podAnnotations": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "router Deployment annotations"
+        },
+        "nodeSelector": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "node labels for router pod assignment"
+        },
+        "tolerations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "operator": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "effect": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "router tolerations"
+        },
+        "config": {
+          "type": "object",
+          "description": "router private config such as JAVA_OPTS"
+        },
+        "affinity": {
+          "type": "object",
+          "description": "router affinity policy"
+        },
+        "ingress": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false,
+              "description": "enable ingress"
+            },
+            "hosts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "chart-example.local"
+              },
+              "description": "hosts for the router api"
+            },
+            "path": {
+              "type": "string",
+              "default": "/",
+              "description": "path of the router api"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "annotations for the router api ingress"
+            },
+            "tls": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "secretName": {
+                    "type": "string",
+                    "description": "Name of the secret for TLS"
+                  },
+                  "hosts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of hosts for TLS"
+                  }
+                }
+              },
+              "description": "TLS configuration for the ingress"
+            }
+          }
+        }
+      },
+      "required": ["enabled", "name", "replicaCount", "port", "serviceType"]
+    },
+    "broker": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable broker"
+        },
+        "name": {
+          "type": "string",
+          "default": "broker",
+          "description": "broker component name"
+        },
+        "replicaCount": {
+          "type": "integer",
+          "default": 1,
+          "description": "broker node replicas (deployment)"
+        },
+        "port": {
+          "type": "integer",
+          "default": 8082,
+          "description": "port of broker component"
+        },
+        "serviceAccount": {
+          "type": "object",
+          "properties": {
+            "create": {
+              "type": "boolean",
+              "default": true,
+              "description": "Create a service account for broker service"
+            },
+            "name": {
+              "type": "string",
+              "description": "Service account name"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Annotations applied to created service account"
+            },
+            "labels": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Labels applied to created service account"
+            },
+            "automountServiceAccountToken": {
+              "type": "boolean",
+              "default": true,
+              "description": "Automount API credentials for the Service Account"
+            }
+          }
+        },
+        "serviceType": {
+          "type": "string",
+          "default": "ClusterIP",
+          "description": "service type for service"
+        },
+        "resources": {
+          "type": "object",
+          "description": "broker node resources requests & limits"
+        },
+        "podAnnotations": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "broker deployment annotations"
+        },
+        "nodeSelector": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "node labels for broker pod assignment"
+        },
+        "tolerations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "operator": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "effect": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "broker tolerations"
+        },
+        "config": {
+          "type": "object",
+          "description": "broker private config such as JAVA_OPTS"
+        },
+        "affinity": {
+          "type": "object",
+          "description": "broker affinity policy"
+        },
+        "ingress": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false,
+              "description": "enable ingress"
+            },
+            "hosts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "chart-example.local"
+              },
+              "description": "hosts for the broker api"
+            },
+            "path": {
+              "type": "string",
+              "default": "/",
+              "description": "path of the broker api"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "annotations for the broker api ingress"
+            },
+            "tls": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "secretName": {
+                    "type": "string",
+                    "description": "Name of the secret for TLS"
+                  },
+                  "hosts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of hosts for TLS"
+                  }
+                }
+              },
+              "description": "TLS configuration for the ingress"
+            }
+          }
+        }
+      },
+      "required": ["enabled", "name", "replicaCount", "port", "serviceType"]
+    },
+    "overlord": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable overlord"
+        },
+        "name": {
+          "type": "string",
+          "default": "overlord",
+          "description": "overlord component name"
+        },
+        "replicaCount": {
+          "type": "integer",
+          "default": 1,
+          "description": "overlord node replicas (deployment)"
+        },
+        "port": {
+          "type": "integer",
+          "default": 8081,
+          "description": "port of overlord component"
+        },
+        "serviceType": {
+          "type": "string",
+          "default": "ClusterIP",
+          "description": "service type for service"
+        },
+        "serviceAccount": {
+          "type": "object",
+          "properties": {
+            "create": {
+              "type": "boolean",
+              "default": true,
+              "description": "Create a service account for overlord service"
+            },
+            "name": {
+              "type": "string",
+              "description": "Service account name"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Annotations applied to created service account"
+            },
+            "labels": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Labels applied to created service account"
+            },
+            "automountServiceAccountToken": {
+              "type": "boolean",
+              "default": true,
+              "description": "Automount API credentials for the Service Account"
+            }
+          }
+        },
+        "resources": {
+          "type": "object",
+          "description": "overlord node resources requests & limits"
+        },
+        "podAnnotations": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "overlord Deployment annotations"
+        },
+        "nodeSelector": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "node labels for overlord pod assignment"
+        },
+        "tolerations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "operator": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "effect": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "overlord tolerations"
+        },
+        "config": {
+          "type": "object",
+          "description": "overlord private config such as JAVA_OPTS"
+        },
+        "affinity": {
+          "type": "object",
+          "description": "overlord affinity policy"
+        },
+        "ingress": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false,
+              "description": "enable ingress"
+            },
+            "hosts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "chart-example.local"
+              },
+              "description": "hosts for the overlord api"
+            },
+            "path": {
+              "type": "string",
+              "default": "/",
+              "description": "path of the overlord api"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "annotations for the overlord api ingress"
+            },
+            "tls": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "secretName": {
+                    "type": "string",
+                    "description": "Name of the secret for TLS"
+                  },
+                  "hosts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of hosts for TLS"
+                  }
+                }
+              },
+              "description": "TLS configuration for the ingress"
+            }
+          }
+        }
+      },
+      "required": ["enabled", "name", "replicaCount", "port", "serviceType"]
+    },
+    "coordinator": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable coordinator"
+        },
+        "name": {
+          "type": "string",
+          "default": "coordinator",
+          "description": "coordinator component name"
+        },
+        "replicaCount": {
+          "type": "integer",
+          "default": 1,
+          "description": "coordinator node replicas (deployment)"
+        },
+        "port": {
+          "type": "integer",
+          "default": 8081,
+          "description": "port of coordinator component"
+        },
+        "serviceType": {
+          "type": "string",
+          "default": "ClusterIP",
+          "description": "service type for service"
+        },
+        "serviceAccount": {
+          "type": "object",
+          "properties": {
+            "create": {
+              "type": "boolean",
+              "default": true,
+              "description": "Create a service account for coordinator service"
+            },
+            "name": {
+              "type": "string",
+              "description": "Service account name"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Annotations applied to created service account"
+            },
+            "labels": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Labels applied to created service account"
+            },
+            "automountServiceAccountToken": {
+              "type": "boolean",
+              "default": true,
+              "description": "Automount API credentials for the Service Account"
+            }
+          }
+        },
+        "resources": {
+          "type": "object",
+          "description": "coordinator node resources requests & limits"
+        },
+        "podAnnotations": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "coordinator Deployment annotations"
+        },
+        "nodeSelector": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "node labels for coordinator pod assignment"
+        },
+        "tolerations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "operator": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "effect": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "coordinator tolerations"
+        },
+        "config": {
+          "type": "object",
+          "description": "coordinator private config such as JAVA_OPTS"
+        },
+        "affinity": {
+          "type": "object",
+          "description": "coordinator affinity policy"
+        },
+        "ingress": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false,
+              "description": "enable ingress"
+            },
+            "hosts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "chart-example.local"
+              },
+              "description": "hosts for the coordinator api"
+            },
+            "path": {
+              "type": "string",
+              "default": "/",
+              "description": "path of the coordinator api"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "annotations for the coordinator api ingress"
+            },
+            "tls": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "secretName": {
+                    "type": "string",
+                    "description": "Name of the secret for TLS"
+                  },
+                  "hosts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of hosts for TLS"
+                  }
+                }
+              },
+              "description": "TLS configuration for the ingress"
+            }
+          }
+        }
+      },
+      "required": ["enabled", "name", "replicaCount", "port", "serviceType"]
+    },
+    "middleManager": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable middleManager"
+        },
+        "name": {
+          "type": "string",
+          "default": "middleManager",
+          "description": "middleManager component name"
+        },
+        "replicaCount": {
+          "type": "integer",
+          "default": 1,
+          "description": "middleManager node replicas (statefulset)"
+        },
+        "port": {
+          "type": "integer",
+          "default": 8091,
+          "description": "port of middleManager component"
+        },
+        "serviceType": {
+          "type": "string",
+          "default": "ClusterIP",
+          "description": "service type for service"
+        },
+        "serviceAccount": {
+          "type": "object",
+          "properties": {
+            "create": {
+              "type": "boolean",
+              "default": true,
+              "description": "Create a service account for middleManager service"
+            },
+            "name": {
+              "type": "string",
+              "description": "Service account name"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Annotations applied to created service account"
+            },
+            "labels": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Labels applied to created service account"
+            },
+            "automountServiceAccountToken": {
+              "type": "boolean",
+              "default": true,
+              "description": "Automount API credentials for the Service Account"
+            }
+          }
+        },
+        "resources": {
+          "type": "object",
+          "description": "middleManager node resources requests & limits"
+        },
+        "podAnnotations": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "middleManager Deployment annotations"
+        },
+        "nodeSelector": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "node labels for middleManager pod assignment"
+        },
+        "securityContext": {
+          "type": "object",
+          "properties": {
+            "fsGroup": {
+              "type": "integer",
+              "default": 1000,
+              "description": "custom security context for middleManager containers"
+            }
+          }
+        },
+        "tolerations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "operator": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "effect": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "middleManager tolerations"
+        },
+        "config": {
+          "type": "object",
+          "description": "middleManager private config such as JAVA_OPTS"
+        },
+        "persistence": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true,
+              "description": "middleManager persistent enabled/disabled"
+            },
+            "size": {
+              "type": "string",
+              "default": "4Gi",
+              "description": "middleManager persistent volume size"
+            },
+            "storageClass": {
+              "type": "string",
+              "description": "middleManager persistent volume Class"
+            },
+            "accessMode": {
+              "type": "string",
+              "default": "ReadWriteOnce",
+              "description": "middleManager persistent Access Mode"
+            }
+          }
+        },
+        "antiAffinity": {
+          "type": "string",
+          "default": "soft",
+          "description": "middleManager anti-affinity policy"
+        },
+        "nodeAffinity": {
+          "type": "object",
+          "description": "middleManager node affinity policy"
+        },
+        "autoscaling": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false,
+              "description": "enable horizontal pod autoscaling"
+            },
+            "minReplicas": {
+              "type": "integer",
+              "default": 2,
+              "description": "middleManager autoscaling min replicas"
+            },
+            "maxReplicas": {
+              "type": "integer",
+              "default": 5,
+              "description": "middleManager autoscaling max replicas"
+            },
+            "metrics": {
+              "type": "object",
+              "description": "middleManager autoscaling metrics"
+            }
+          }
+        },
+        "ingress": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false,
+              "description": "enable ingress"
+            },
+            "hosts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "chart-example.local"
+              },
+              "description": "hosts for the middleManager api"
+            },
+            "path": {
+              "type": "string",
+              "default": "/",
+              "description": "path of the middleManager api"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "annotations for the middleManager api ingress"
+            },
+            "tls": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "secretName": {
+                    "type": "string",
+                    "description": "Name of the secret for TLS"
+                  },
+                  "hosts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of hosts for TLS"
+                  }
+                }
+              },
+              "description": "TLS configuration for the ingress"
+            }
+          }
+        }
+      },
+      "required": ["enabled", "name", "replicaCount", "port", "serviceType"]
+    },
+    "historical": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable historical"
+        },
+        "name": {
+          "type": "string",
+          "default": "historical",
+          "description": "historical component name"
+        },
+        "replicaCount": {
+          "type": "integer",
+          "default": 1,
+          "description": "historical node replicas (statefulset)"
+        },
+        "port": {
+          "type": "integer",
+          "default": 8083,
+          "description": "port of historical component"
+        },
+        "serviceType": {
+          "type": "string",
+          "default": "ClusterIP",
+          "description": "service type for service"
+        },
+        "serviceAccount": {
+          "type": "object",
+          "properties": {
+            "create": {
+              "type": "boolean",
+              "default": true,
+              "description": "Create a service account for historical service"
+            },
+            "name": {
+              "type": "string",
+              "description": "Service account name"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Annotations applied to created service account"
+            },
+            "labels": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Labels applied to created service account"
+            },
+            "automountServiceAccountToken": {
+              "type": "boolean",
+              "default": true,
+              "description": "Automount API credentials for the Service Account"
+            }
+          }
+        },
+        "resources": {
+          "type": "object",
+          "description": "historical node resources requests & limits"
+        },
+        "livenessProbeInitialDelaySeconds": {
+          "type": "integer",
+          "default": 60,
+          "description": "historical node liveness probe initial delay in seconds"
+        },
+        "readinessProbeInitialDelaySeconds": {
+          "type": "integer",
+          "default": 60,
+          "description": "historical node readiness probe initial delay in seconds"
+        },
+        "podAnnotations": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "historical Deployment annotations"
+        },
+        "nodeSelector": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "node labels for historical pod assignment"
+        },
+        "securityContext": {
+          "type": "object",
+          "properties": {
+            "fsGroup": {
+              "type": "integer",
+              "default": 1000,
+              "description": "custom security context for historical containers"
+            }
+          }
+        },
+        "tolerations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "operator": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "effect": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "historical tolerations"
+        },
+        "config": {
+          "type": "object",
+          "description": "historical node private config such as JAVA_OPTS"
+        },
+        "persistence": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true,
+              "description": "historical persistent enabled/disabled"
+            },
+            "size": {
+              "type": "string",
+              "default": "4Gi",
+              "description": "historical persistent volume size"
+            },
+            "storageClass": {
+              "type": "string",
+              "description": "historical persistent volume Class"
+            },
+            "accessMode": {
+              "type": "string",
+              "default": "ReadWriteOnce",
+              "description": "historical persistent Access Mode"
+            }
+          }
+        },
+        "antiAffinity": {
+          "type": "string",
+          "default": "soft",
+          "description": "historical anti-affinity policy"
+        },
+        "nodeAffinity": {
+          "type": "object",
+          "description": "historical node affinity policy"
+        },
+        "ingress": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false,
+              "description": "enable ingress"
+            },
+            "hosts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "chart-example.local"
+              },
+              "description": "hosts for the historical api"
+            },
+            "path": {
+              "type": "string",
+              "default": "/",
+              "description": "path of the historical api"
+            },
+            "annotations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "annotations for the historical api ingress"
+            },
+            "tls": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "secretName": {
+                    "type": "string",
+                    "description": "Name of the secret for TLS"
+                  },
+                  "hosts": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of hosts for TLS"
+                  }
+                }
+              },
+              "description": "TLS configuration for the ingress"
+            }
+          }
+        }
+      },
+      "required": ["enabled", "name", "replicaCount", "port", "serviceType"]
+    },
+    "postgresql": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable PostgreSQL"
+        },
+        "auth": {
+          "type": "object",
+          "properties": {
+            "username": {
+              "type": "string",
+              "default": "druid",
+              "description": "PostgreSQL username"
+            },
+            "password": {
+              "type": "string",
+              "default": "druid",
+              "description": "PostgreSQL password"
+            },
+            "database": {
+              "type": "string",
+              "default": "druid",
+              "description": "PostgreSQL database"
+            }
+          }
+        },
+        "service": {
+          "type": "object",
+          "properties": {
+            "port": {
+              "type": "integer",
+              "default": 5432,
+              "description": "PostgreSQL service port"
+            }
+          }
+        }
+      }
+    },
+    "prometheus": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Support scraping from prometheus"
+        },
+        "port": {
+          "type": "integer",
+          "default": 9090,
+          "description": "expose prometheus port"
+        },
+        "annotation": {
+          "type": "object",
+          "properties": {
+            "prometheus.io/scrape": {
+              "type": "string",
+              "default": "true"
+            },
+            "prometheus.io/port": {
+              "type": "string",
+              "default": "9090"
+            }
+          },
+          "description": "pods annotation to notify prometheus scraping"
+        }
+      }
+    }
+  }
+}
