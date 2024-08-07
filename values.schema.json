@@ -107,7 +107,10 @@
               "description": "Create a service account for router service"
             },
             "name": {
-              "type": "string",
+              "anyOf": [
+                { "type": "string" },
+                { "type": "null" }
+              ],
               "description": "Service account name"
             },
             "annotations": {
@@ -263,7 +266,10 @@
               "description": "Create a service account for broker service"
             },
             "name": {
-              "type": "string",
+              "anyOf": [
+                { "type": "string" },
+                { "type": "null" }
+              ],
               "description": "Service account name"
             },
             "annotations": {
@@ -429,7 +435,10 @@
               "description": "Create a service account for overlord service"
             },
             "name": {
-              "type": "string",
+              "anyOf": [
+                { "type": "string" },
+                { "type": "null" }
+              ],
               "description": "Service account name"
             },
             "annotations": {
@@ -590,7 +599,10 @@
               "description": "Create a service account for coordinator service"
             },
             "name": {
-              "type": "string",
+              "anyOf": [
+                { "type": "string" },
+                { "type": "null" }
+              ],
               "description": "Service account name"
             },
             "annotations": {
@@ -751,7 +763,10 @@
               "description": "Create a service account for middleManager service"
             },
             "name": {
-              "type": "string",
+              "anyOf": [
+                { "type": "string" },
+                { "type": "null" }
+              ],
               "description": "Service account name"
             },
             "annotations": {
@@ -880,7 +895,35 @@
               "description": "middleManager autoscaling max replicas"
             },
             "metrics": {
-              "type": "object",
+              "type": "array",
+              "default": [],
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "resource": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "target": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string"
+                          },
+                          "averageUtilization": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
               "description": "middleManager autoscaling metrics"
             }
           }
@@ -975,7 +1018,10 @@
               "description": "Create a service account for historical service"
             },
             "name": {
-              "type": "string",
+              "anyOf": [
+                { "type": "string" },
+                { "type": "null" }
+              ],
               "description": "Service account name"
             },
             "annotations": {
