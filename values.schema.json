@@ -895,7 +895,35 @@
               "description": "middleManager autoscaling max replicas"
             },
             "metrics": {
-              "type": "object",
+              "type": "array",
+              "default": [],
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "resource": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "target": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string"
+                          },
+                          "averageUtilization": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
               "description": "middleManager autoscaling metrics"
             }
           }

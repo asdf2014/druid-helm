@@ -187,39 +187,39 @@ The following table lists the configurable parameters of the Druid Helm Chart an
 
 ### MiddleManager
 
-| Parameter                                                   | Description                                          | Default                     |
-| ----------------------------------------------------------- | ---------------------------------------------------- | --------------------------- |
-| `middleManager.enabled`                                     | enable middleManager                                 | `true`                      |
-| `middleManager.name`                                        | middleManager component name                         | `middleManager`             |
-| `middleManager.replicaCount`                                | middleManager node replicas (statefulset)            | `1`                         |
-| `middleManager.port`                                        | port of middleManager component                      | `8091`                      |
-| `middleManager.serviceType`                                 | service type for service                             | `ClusterIP`                 |
-| `middleManager.serviceAccount.create`                       | Create a service account for middleManager service   | `true`                      |
-| `middleManager.serviceAccount.name`                         | Service account name                                 | ``                          |
-| `middleManager.serviceAccount.annotations`                  | Annotations applied to created service account       | `{}`                        |
-| `middleManager.serviceAccount.labels`                       | Labels applied to created service account            | `{}`                        |
-| `middleManager.serviceAccount.automountServiceAccountToken` | Automount API credentials for the Service Account    | `true`                      |
-| `middleManager.resources`                                   | middleManager node resources requests & limits       | `{}`                        |
-| `middleManager.podAnnotations`                              | middleManager Deployment annotations                 | `{}`                        |
-| `middleManager.nodeSelector`                                | Node labels for middleManager pod assignment         | `{}`                        |
-| `middleManager.securityContext`                             | custom security context for middleManager containers | `{ fsGroup: 1000 }`         |
-| `middleManager.tolerations`                                 | middleManager tolerations                            | `[]`                        |
-| `middleManager.config`                                      | middleManager private config such as `JAVA_OPTS`     |                             |
-| `middleManager.persistence.enabled`                         | middleManager persistent enabled/disabled            | `true`                      |
-| `middleManager.persistence.size`                            | middleManager persistent volume size                 | `4Gi`                       |
-| `middleManager.persistence.storageClass`                    | middleManager persistent volume Class                | `nil`                       |
-| `middleManager.persistence.accessMode`                      | middleManager persistent Access Mode                 | `ReadWriteOnce`             |
-| `middleManager.antiAffinity`                                | middleManager anti-affinity policy                   | `soft`                      |
-| `middleManager.nodeAffinity`                                | middleManager node affinity policy                   | `{}`                        |
-| `middleManager.autoscaling.enabled`                         | enable horizontal pod autoscaling                    | `false`                     |
-| `middleManager.autoscaling.minReplicas`                     | middleManager autoscaling min replicas               | `2`                         |
-| `middleManager.autoscaling.maxReplicas`                     | middleManager autoscaling max replicas               | `5`                         |
-| `middleManager.autoscaling.metrics`                         | middleManager autoscaling metrics                    | `{}`                        |
-| `middleManager.ingress.enabled`                             | enable ingress                                       | `false`                     |
+| Parameter                                                   | Description                                          | Default                   |
+| ----------------------------------------------------------- | ---------------------------------------------------- |---------------------------|
+| `middleManager.enabled`                                     | enable middleManager                                 | `true`                    |
+| `middleManager.name`                                        | middleManager component name                         | `middleManager`           |
+| `middleManager.replicaCount`                                | middleManager node replicas (statefulset)            | `1`                       |
+| `middleManager.port`                                        | port of middleManager component                      | `8091`                    |
+| `middleManager.serviceType`                                 | service type for service                             | `ClusterIP`               |
+| `middleManager.serviceAccount.create`                       | Create a service account for middleManager service   | `true`                    |
+| `middleManager.serviceAccount.name`                         | Service account name                                 | ``                        |
+| `middleManager.serviceAccount.annotations`                  | Annotations applied to created service account       | `{}`                      |
+| `middleManager.serviceAccount.labels`                       | Labels applied to created service account            | `{}`                      |
+| `middleManager.serviceAccount.automountServiceAccountToken` | Automount API credentials for the Service Account    | `true`                    |
+| `middleManager.resources`                                   | middleManager node resources requests & limits       | `{}`                      |
+| `middleManager.podAnnotations`                              | middleManager Deployment annotations                 | `{}`                      |
+| `middleManager.nodeSelector`                                | Node labels for middleManager pod assignment         | `{}`                      |
+| `middleManager.securityContext`                             | custom security context for middleManager containers | `{ fsGroup: 1000 }`       |
+| `middleManager.tolerations`                                 | middleManager tolerations                            | `[]`                      |
+| `middleManager.config`                                      | middleManager private config such as `JAVA_OPTS`     |                           |
+| `middleManager.persistence.enabled`                         | middleManager persistent enabled/disabled            | `true`                    |
+| `middleManager.persistence.size`                            | middleManager persistent volume size                 | `4Gi`                     |
+| `middleManager.persistence.storageClass`                    | middleManager persistent volume Class                | `nil`                     |
+| `middleManager.persistence.accessMode`                      | middleManager persistent Access Mode                 | `ReadWriteOnce`           |
+| `middleManager.antiAffinity`                                | middleManager anti-affinity policy                   | `soft`                    |
+| `middleManager.nodeAffinity`                                | middleManager node affinity policy                   | `{}`                      |
+| `middleManager.autoscaling.enabled`                         | enable horizontal pod autoscaling                    | `false`                   |
+| `middleManager.autoscaling.minReplicas`                     | middleManager autoscaling min replicas               | `2`                       |
+| `middleManager.autoscaling.maxReplicas`                     | middleManager autoscaling max replicas               | `5`                       |
+| `middleManager.autoscaling.metrics`                         | middleManager autoscaling metrics                    | `[]`                      |
+| `middleManager.ingress.enabled`                             | enable ingress                                       | `false`                   |
 | `middleManager.ingress.hosts`                               | hosts for the middleManager api                      | `[ "chart-example.local" ]` |
-| `middleManager.ingress.path`                                | path of the middleManager api                        | `/`                         |
-| `middleManager.ingress.annotations`                         | annotations for the middleManager api ingress        | `{}`                        |
-| `middleManager.ingress.tls`                                 | TLS configuration for the ingress                    | `[]`                        |
+| `middleManager.ingress.path`                                | path of the middleManager api                        | `/`                       |
+| `middleManager.ingress.annotations`                         | annotations for the middleManager api ingress        | `{}`                      |
+| `middleManager.ingress.tls`                                 | TLS configuration for the ingress                    | `[]`                      |
 
 ### Historical
 
