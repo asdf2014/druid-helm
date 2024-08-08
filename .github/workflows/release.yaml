@@ -58,5 +58,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master
       - name: Run ah lint
-        working-directory: ./charts/druid
+        working-directory: .
         run: ah lint
