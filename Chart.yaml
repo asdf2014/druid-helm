@@ -62,3 +62,6 @@ annotations:
       url: https://imply.io/resources/blog/
     - name: Druid Blog in Chinese
       url: https://yuzhouwan.com/posts/5845/
+  artifacthub.io/signKey: |
+    fingerprint: A4521768456A60E88DBE8066139B25C1B5D1AD02
+    url: https://keybase.io/gwshopee
