@@ -48,3 +48,15 @@ jobs:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CR_KEY: "${{ secrets.CR_KEY }}" #Key name used while creating key
           CR_SIGN: true # set to true to sign images
+
+  linter-artifacthub:
+    runs-on: ubuntu-latest
+    container:
+      image: artifacthub/ah
+      options: --user 1001
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: Run ah lint
+        working-directory: ./charts/druid
+        run: ah lint
