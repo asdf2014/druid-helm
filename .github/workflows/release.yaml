@@ -1,0 +1,62 @@
+name: Release Charts
+on:
+  push:
+    branches:
+      - main
+      - release-**
+jobs:
+  release:
+    # depending on default permission settings for your org (contents being read-only or read-write for workloads), you will have to add permissions
+    # see: https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
+        with:
+          fetch-depth: 0
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Install Helm
+        uses: azure/setup-helm@5119fcb9089d432beecbf79bb2c7915207344b78 #v3.5
+        with:
+          version: v3.8.1
+      - name: Prepare GPG key #this step is for using exported keys and make your github runner
+        run: |
+          gpg_dir=.cr-gpg
+          mkdir "$gpg_dir"
+          keyring="$gpg_dir/secring.gpg" #referring keyring to private key of gpg
+          base64 -d <<< "$GPG_KEYRING_BASE64" > "$keyring" #storing base64 GPG key into keyring 
+          passphrase_file="$gpg_dir/passphrase"
+          echo "$GPG_PASSPHRASE" > "$passphrase_file" #storing passphrase data into a file
+          echo "CR_PASSPHRASE_FILE=$passphrase_file" >> "$GITHUB_ENV" #saving passphrase into github-environment
+          echo "CR_KEYRING=$keyring" >> "$GITHUB_ENV" #saving private key into github-environemnt
+        env:
+          GPG_KEYRING_BASE64: "${{ secrets.GPG_KEYRING_BASE64 }}" #Referring secrets of github above
+          GPG_PASSPHRASE: "${{ secrets.GPG_PASSPHRASE }}"
+      - name: Add repositories
+        run: |
+          for dir in $(ls -d charts/*/); do
+            helm dependency list $dir 2> /dev/null | tail +2 | head -n -1 | awk '{ print "helm repo add " $1 " " $3 }' | while read cmd; do $cmd; done
+          done
+      - name: Run chart-releaser #this is used to generate new version of helm chart along with some file with extension .prov
+        uses: helm/chart-releaser-action@a917fd15b20e8b64b94d9158ad54cd6345335584 #v1.6.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_KEY: "${{ secrets.CR_KEY }}" #Key name used while creating key
+          CR_SIGN: true # set to true to sign images
+
+  linter-artifacthub:
+    runs-on: ubuntu-latest
+    container:
+      image: artifacthub/ah
+      options: --user 1001
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: Run ah lint
+        working-directory: ./charts/druid
+        run: ah lint
