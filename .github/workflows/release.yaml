@@ -53,7 +53,7 @@ jobs:
         run: |
           helm repo index . --merge index.yaml
           git add index.yaml
-          git commit -m "Helm Release"
+          git commit -m "Helm Release [skip ci]"
           git push origin main
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
