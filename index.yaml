@@ -1,1237 +1,1181 @@
 apiVersion: v1
 entries:
   druid:
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-      artifacthub.io/signKey: |-
-        fingerprint: A4521768456A60E88DBE8066139B25C1B5D1AD02
-        url: https://keybase.io/gwshopee
-    apiVersion: v2
-    appVersion: 30.0.0
-    created: "2024-08-12T18:15:15.679971+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 13.4.10
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: ed0acc6ccb5f3b35903cce7a5970a019a10b7907032b42744906150b3e846eab
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-30.0.6.tgz
-    version: 30.0.6
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 30.0.0
-    created: "2024-08-12T18:15:15.671431+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 13.4.10
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 9b7c87997db0538c030a923b41f04c9144aaef608f86c552f97023ee3f5370bf
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-30.0.5.tgz
-    version: 30.0.5
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 30.0.0
-    created: "2024-08-12T18:15:15.660356+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 13.4.10
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: be41749390339e345edbcedec5a6c5d98f57bd53062afcd512d0171b0e071414
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-30.0.4.tgz
-    version: 30.0.4
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 30.0.0
-    created: "2024-08-12T18:15:15.648458+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 13.4.10
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 5298960efe99923d20b4a77bebe0b51e0546c81459e97f991041f6a11bb05df4
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-30.0.3.tgz
-    version: 30.0.3
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 30.0.0
-    created: "2024-08-12T18:15:15.638782+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 13.4.3
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: e557068658cb0c1fbca2c34d99e9f5add22d152733bb3d6565672363eb547d76
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-30.0.1.tgz
-    version: 30.0.1
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 30.0.0
-    created: "2024-08-12T18:15:15.629357+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 13.4.3
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 2e864af82c569bb11692071c2a7b97846aad8d4ffcb9404b324eee7678effd90
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-30.0.0.tgz
-    version: 30.0.0
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.618463+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 13.4.3
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 138d8fc0f2e5640d25f9f15cf3bf62fb8a9415519c0ddccccde724304dfeb45d
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.9.tgz
-    version: 29.1.9
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.608682+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 13.4.3
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: ffee351df739bd6f1aed8558ca608d77b1f6f9e046a4730a6651c88747d00267
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.8.tgz
-    version: 29.1.8
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.598515+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.1
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: e1de301e34561d73c2d0edc696136057dbf64e511f8cd87e9e2e815cee7518f2
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.7.tgz
-    version: 29.1.7
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.587131+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.1
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 7aa8bf1b5bace8782f64b9e1373e7d60d22f2db427c687637da45e8f104d2e3e
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.6.tgz
-    version: 29.1.6
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.577604+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.1
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: eda3474d35f259de229d576f558b3550af8910e41e7f8b5293c5b26ded745fc0
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.5.tgz
-    version: 29.1.5
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.56786+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.1
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.5
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: ac0176d5a0f87809062665e991921039d858fcf8351db7490b88dca29a202157
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.4.tgz
-    version: 29.1.4
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.557036+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.1
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.5
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 975f8939077f6bc413a5a193c13791f5b35c0dd0aaa88581c1cf74f116d8ba95
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.3.tgz
-    version: 29.1.3
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.54679+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.1
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 14.3.3
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 88a66a37574e8a0347816c07c44417476a309b3a4d5bceb0b49a05c4fada658e
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.2.tgz
-    version: 29.1.2
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.537002+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.1
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 14.3.3
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 77605b632ef80f857d4ca013de71197691eb17cd366d98817608698513e1cf09
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.1.tgz
-    version: 29.1.1
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.1
-    created: "2024-08-12T18:15:15.526963+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.0
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 14.3.3
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 7f91d05216b480282fad80423a57c6f3e762e9d32ab93879f9b7981e83b65e8c
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.1.0.tgz
-    version: 29.1.0
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-    apiVersion: v2
-    appVersion: 29.0.0
-    created: "2024-08-12T18:15:15.517334+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.0
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 14.3.3
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: ccd2548f68fff31ab0cf890c72c087506a8506dd363eba58ae08be892502c725
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-29.0.7.tgz
-    version: 29.0.7
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-    apiVersion: v2
-    appVersion: 29.0.0
-    created: "2024-08-12T18:15:15.507564+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.0
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 14.3.3
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 5eab3796e30a5f42d4881dd13a3af5c3fb9006975cb732b8fb0b02d843852acc
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - olap
-    - database
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    urls:
-    - releases/druid-29.0.6.tgz
-    version: 29.0.6
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-    apiVersion: v2
-    appVersion: 29.0.0
-    created: "2024-08-12T18:15:15.496677+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.12.0
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.helm.sh/stable
-      version: 8.6.4
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 6d07af5cb5bb6bec74c1120cef8930f0380489894415a94af1682370e7a4fde9
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - olap
-    - database
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    urls:
-    - releases/druid-29.0.5.tgz
-    version: 29.0.5
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-    apiVersion: v2
-    appVersion: 29.0.0
-    created: "2024-08-12T18:15:15.488567+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.11.1
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.helm.sh/stable
-      version: 8.6.4
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: d9bfc75abd2a64d39afdca56b22ba86b57a5458950e8545bad6dc101c1ec8d56
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - olap
-    - database
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    urls:
-    - releases/druid-29.0.4.tgz
-    version: 29.0.4
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-    apiVersion: v2
-    appVersion: 29.0.0
-    created: "2024-08-12T18:15:15.481655+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.helm.sh/incubator
-      version: 2.1.4
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.helm.sh/stable
-      version: 8.6.4
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: ab47b217032645f64d43005480368d23aaa3928d85d0c5cbb35e11bc33f9040d
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - olap
-    - database
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    urls:
-    - releases/druid-29.0.3.tgz
-    version: 29.0.3
-  - apiVersion: v2
-    appVersion: 29.0.0
-    created: "2024-08-12T18:15:15.475881+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.helm.sh/incubator
-      version: 2.1.4
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.helm.sh/stable
-      version: 8.6.4
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: cc7de2ec9c758b3b57e008a49b0d12583a84aeca4c297b653207bbf50ff49c3c
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - olap
-    - database
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    urls:
-    - releases/druid-29.0.2.tgz
-    version: 29.0.2
-  - apiVersion: v2
-    appVersion: 29.0.0
-    created: "2024-08-12T18:15:15.469799+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.helm.sh/incubator
-      version: 2.1.4
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.helm.sh/stable
-      version: 8.6.4
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: 16be11850411cedfeefa650a5ad2140eef29820765d2ba9ebd15f8c1d734554b
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - olap
-    - database
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    urls:
-    - releases/druid-29.0.1.tgz
-    version: 29.0.1
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 30.0.0
+      created: "2024-08-07T15:08:48.238975+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 13.4.10
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 9b7c87997db0538c030a923b41f04c9144aaef608f86c552f97023ee3f5370bf
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-30.0.5.tgz
+      version: 30.0.5
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 30.0.0
+      created: "2024-08-07T15:08:48.229165+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 13.4.10
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: be41749390339e345edbcedec5a6c5d98f57bd53062afcd512d0171b0e071414
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-30.0.4.tgz
+      version: 30.0.4
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 30.0.0
+      created: "2024-08-07T15:08:48.21962+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 13.4.10
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 5298960efe99923d20b4a77bebe0b51e0546c81459e97f991041f6a11bb05df4
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-30.0.3.tgz
+      version: 30.0.3
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 30.0.0
+      created: "2024-08-07T15:08:48.209292+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 13.4.3
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: e557068658cb0c1fbca2c34d99e9f5add22d152733bb3d6565672363eb547d76
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-30.0.1.tgz
+      version: 30.0.1
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 30.0.0
+      created: "2024-08-07T15:08:48.198144+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 13.4.3
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 2e864af82c569bb11692071c2a7b97846aad8d4ffcb9404b324eee7678effd90
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-30.0.0.tgz
+      version: 30.0.0
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.185643+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 13.4.3
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 138d8fc0f2e5640d25f9f15cf3bf62fb8a9415519c0ddccccde724304dfeb45d
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.9.tgz
+      version: 29.1.9
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.174113+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 13.4.3
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: ffee351df739bd6f1aed8558ca608d77b1f6f9e046a4730a6651c88747d00267
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.8.tgz
+      version: 29.1.8
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.162761+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.1
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: e1de301e34561d73c2d0edc696136057dbf64e511f8cd87e9e2e815cee7518f2
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.7.tgz
+      version: 29.1.7
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.152577+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.1
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 7aa8bf1b5bace8782f64b9e1373e7d60d22f2db427c687637da45e8f104d2e3e
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.6.tgz
+      version: 29.1.6
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.142275+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.1
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.8
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: eda3474d35f259de229d576f558b3550af8910e41e7f8b5293c5b26ded745fc0
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.5.tgz
+      version: 29.1.5
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.132232+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.1
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.5
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: ac0176d5a0f87809062665e991921039d858fcf8351db7490b88dca29a202157
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.4.tgz
+      version: 29.1.4
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.121745+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.1
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 15.2.5
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 975f8939077f6bc413a5a193c13791f5b35c0dd0aaa88581c1cf74f116d8ba95
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.3.tgz
+      version: 29.1.3
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.111583+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.1
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 14.3.3
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 88a66a37574e8a0347816c07c44417476a309b3a4d5bceb0b49a05c4fada658e
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+        - email: fectrain@outlook.com
+          name: Sensor
+          url: https://github.com/fectrain
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.2.tgz
+      version: 29.1.2
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.101521+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.1
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 14.3.3
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 77605b632ef80f857d4ca013de71197691eb17cd366d98817608698513e1cf09
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.1.tgz
+      version: 29.1.1
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.1
+      created: "2024-08-07T15:08:48.091375+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.0
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 14.3.3
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 7f91d05216b480282fad80423a57c6f3e762e9d32ab93879f9b7981e83b65e8c
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.1.0.tgz
+      version: 29.1.0
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+          - name: Druid Blog in English
+            url: https://imply.io/resources/blog/
+          - name: Druid Blog in Chinese
+            url: https://yuzhouwan.com/posts/5845/
+      apiVersion: v2
+      appVersion: 29.0.0
+      created: "2024-08-07T15:08:48.080739+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.0
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 14.3.3
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: ccd2548f68fff31ab0cf890c72c087506a8506dd363eba58ae08be892502c725
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - bigdata
+        - database
+        - tsdb
+        - olap
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+        - https://imply.io/resources/blog/
+        - https://yuzhouwan.com/posts/5845/
+      urls:
+        - releases/druid-29.0.7.tgz
+      version: 29.0.7
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+      apiVersion: v2
+      appVersion: 29.0.0
+      created: "2024-08-07T15:08:48.070577+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.0
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.bitnami.com/bitnami
+          version: 14.3.3
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 5eab3796e30a5f42d4881dd13a3af5c3fb9006975cb732b8fb0b02d843852acc
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - olap
+        - database
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+      urls:
+        - releases/druid-29.0.6.tgz
+      version: 29.0.6
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+      apiVersion: v2
+      appVersion: 29.0.0
+      created: "2024-08-07T15:08:48.059309+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.12.0
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.helm.sh/stable
+          version: 8.6.4
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 6d07af5cb5bb6bec74c1120cef8930f0380489894415a94af1682370e7a4fde9
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - olap
+        - database
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+      urls:
+        - releases/druid-29.0.5.tgz
+      version: 29.0.5
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+      apiVersion: v2
+      appVersion: 29.0.0
+      created: "2024-08-07T15:08:48.050828+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.bitnami.com/bitnami
+          version: 12.11.1
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.helm.sh/stable
+          version: 8.6.4
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: d9bfc75abd2a64d39afdca56b22ba86b57a5458950e8545bad6dc101c1ec8d56
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - olap
+        - database
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+      urls:
+        - releases/druid-29.0.4.tgz
+      version: 29.0.4
+    - annotations:
+        artifacthub.io/license: Apache-2.0
+        artifacthub.io/links: |
+          - name: Upstream Project
+            url: https://github.com/apache/druid
+          - name: Chart Source
+            url: https://github.com/asdf2014/druid-helm
+      apiVersion: v2
+      appVersion: 29.0.0
+      created: "2024-08-07T15:08:48.042195+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.helm.sh/incubator
+          version: 2.1.4
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.helm.sh/stable
+          version: 8.6.4
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: ab47b217032645f64d43005480368d23aaa3928d85d0c5cbb35e11bc33f9040d
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - olap
+        - database
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+      urls:
+        - releases/druid-29.0.3.tgz
+      version: 29.0.3
+    - apiVersion: v2
+      appVersion: 29.0.0
+      created: "2024-08-07T15:08:48.036276+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.helm.sh/incubator
+          version: 2.1.4
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.helm.sh/stable
+          version: 8.6.4
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: cc7de2ec9c758b3b57e008a49b0d12583a84aeca4c297b653207bbf50ff49c3c
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - olap
+        - database
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+        - https://github.com/asdf2014/druid-helm
+      urls:
+        - releases/druid-29.0.2.tgz
+      version: 29.0.2
+    - apiVersion: v2
+      appVersion: 29.0.0
+      created: "2024-08-07T15:08:48.029137+08:00"
+      dependencies:
+        - condition: zookeeper.enabled
+          name: zookeeper
+          repository: https://charts.helm.sh/incubator
+          version: 2.1.4
+        - condition: mysql.enabled
+          name: mysql
+          repository: https://charts.helm.sh/stable
+          version: 1.6.4
+        - condition: postgresql.enabled
+          name: postgresql
+          repository: https://charts.helm.sh/stable
+          version: 8.6.4
+      description: Apache Druid is a high performance real-time analytics database.
+      digest: 16be11850411cedfeefa650a5ad2140eef29820765d2ba9ebd15f8c1d734554b
+      home: https://druid.apache.org/
+      icon: https://druid.apache.org/img/favicon.png
+      keywords:
+        - olap
+        - database
+        - analytics
+      maintainers:
+        - email: asdf2014@apache.org
+          name: Benedict Jin
+          url: https://yuzhouwan.com/
+      name: druid
+      sources:
+        - https://github.com/apache/druid
+      urls:
+        - releases/druid-29.0.1.tgz
+      version: 29.0.1
   mysql:
-  - apiVersion: v1
-    appVersion: 5.7.30
-    created: "2024-08-12T18:15:15.450385+08:00"
-    description: Fast, reliable, scalable, and easy to use open-source relational
-      database system.
-    digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
-    home: https://www.mysql.com/
-    icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
-    keywords:
-    - mysql
-    - database
-    - sql
-    maintainers:
-    - email: o.with@sportradar.com
-      name: olemarkus
-    - email: viglesias@google.com
-      name: viglesiasce
-    name: mysql
-    sources:
-    - https://github.com/kubernetes/charts
-    - https://github.com/docker-library/mysql
-    urls:
-    - charts/mysql-1.6.4.tgz
-    version: 1.6.4
+    - apiVersion: v1
+      appVersion: 5.7.30
+      created: "2024-08-07T15:08:48.011471+08:00"
+      description: Fast, reliable, scalable, and easy to use open-source relational
+        database system.
+      digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
+      home: https://www.mysql.com/
+      icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+      keywords:
+        - mysql
+        - database
+        - sql
+      maintainers:
+        - email: o.with@sportradar.com
+          name: olemarkus
+        - email: viglesias@google.com
+          name: viglesiasce
+      name: mysql
+      sources:
+        - https://github.com/kubernetes/charts
+        - https://github.com/docker-library/mysql
+      urls:
+        - charts/mysql-1.6.4.tgz
+      version: 1.6.4
   postgresql:
-  - annotations:
-      category: Database
-      images: |
-        - name: os-shell
-          image: docker.io/bitnami/os-shell:12-debian-12-r19
-        - name: postgres-exporter
-          image: docker.io/bitnami/postgres-exporter:0.15.0-debian-12-r17
-        - name: postgresql
-          image: docker.io/bitnami/postgresql:16.2.0-debian-12-r18
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 16.2.0
-    created: "2024-08-12T18:15:15.460004+08:00"
-    dependencies:
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: PostgreSQL (Postgres) is an open source object-relational database
-      known for reliability and data integrity. ACID-compliant, it supports foreign
-      keys, joins, views, triggers and stored procedures.
-    digest: ad4fb329b6db74c3085846c84e6f1c81bbf9a62e5a695b150f0c671978b6d2e0
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
-    keywords:
-    - postgresql
-    - postgres
-    - database
-    - sql
-    - replication
-    - cluster
-    maintainers:
-    - name: VMware, Inc.
-      url: https://github.com/bitnami/charts
-    name: postgresql
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
-    urls:
-    - charts/postgresql-15.2.8.tgz
-    version: 15.2.8
+    - annotations:
+        category: Database
+        images: |
+          - name: os-shell
+            image: docker.io/bitnami/os-shell:12-debian-12-r19
+          - name: postgres-exporter
+            image: docker.io/bitnami/postgres-exporter:0.15.0-debian-12-r17
+          - name: postgresql
+            image: docker.io/bitnami/postgresql:16.2.0-debian-12-r18
+        licenses: Apache-2.0
+      apiVersion: v2
+      appVersion: 16.2.0
+      created: "2024-08-07T15:08:48.017832+08:00"
+      dependencies:
+        - name: common
+          repository: oci://registry-1.docker.io/bitnamicharts
+          tags:
+            - bitnami-common
+          version: 2.x.x
+      description: PostgreSQL (Postgres) is an open source object-relational database
+        known for reliability and data integrity. ACID-compliant, it supports foreign
+        keys, joins, views, triggers and stored procedures.
+      digest: ad4fb329b6db74c3085846c84e6f1c81bbf9a62e5a695b150f0c671978b6d2e0
+      home: https://bitnami.com
+      icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+      keywords:
+        - postgresql
+        - postgres
+        - database
+        - sql
+        - replication
+        - cluster
+      maintainers:
+        - name: VMware, Inc.
+          url: https://github.com/bitnami/charts
+      name: postgresql
+      sources:
+        - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+      urls:
+        - charts/postgresql-15.2.8.tgz
+      version: 15.2.8
   zookeeper:
-  - annotations:
-      category: Infrastructure
-      images: |
-        - name: os-shell
-          image: docker.io/bitnami/os-shell:12-debian-12-r27
-        - name: zookeeper
-          image: docker.io/bitnami/zookeeper:3.9.2-debian-12-r11
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 3.9.2
-    created: "2024-08-12T18:15:15.46316+08:00"
-    dependencies:
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: Apache ZooKeeper provides a reliable, centralized register of configuration
-      data and services for distributed applications.
-    digest: 10a746c1f24b1a1ef4dbd38bf35e07bd23765e515313bfbbb192ee66ac7b06d6
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
-    keywords:
-    - zookeeper
-    maintainers:
-    - name: Broadcom, Inc. All Rights Reserved.
-      url: https://github.com/bitnami/charts
-    name: zookeeper
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/zookeeper
-    urls:
-    - charts/zookeeper-13.4.10.tgz
-    version: 13.4.10
-generated: "2024-08-12T18:15:15.448703+08:00"
+    - annotations:
+        category: Infrastructure
+        images: |
+          - name: os-shell
+            image: docker.io/bitnami/os-shell:12-debian-12-r27
+          - name: zookeeper
+            image: docker.io/bitnami/zookeeper:3.9.2-debian-12-r11
+        licenses: Apache-2.0
+      apiVersion: v2
+      appVersion: 3.9.2
+      created: "2024-08-07T15:08:48.021543+08:00"
+      dependencies:
+        - name: common
+          repository: oci://registry-1.docker.io/bitnamicharts
+          tags:
+            - bitnami-common
+          version: 2.x.x
+      description: Apache ZooKeeper provides a reliable, centralized register of configuration
+        data and services for distributed applications.
+      digest: 10a746c1f24b1a1ef4dbd38bf35e07bd23765e515313bfbbb192ee66ac7b06d6
+      home: https://bitnami.com
+      icon: https://bitnami.com/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
+      keywords:
+        - zookeeper
+      maintainers:
+        - name: Broadcom, Inc. All Rights Reserved.
+          url: https://github.com/bitnami/charts
+      name: zookeeper
+      sources:
+        - https://github.com/bitnami/charts/tree/main/bitnami/zookeeper
+      urls:
+        - charts/zookeeper-13.4.10.tgz
+      version: 13.4.10
+generated: "2024-08-07T15:08:48.010243+08:00"
