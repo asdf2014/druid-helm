@@ -51,6 +51,7 @@ jobs:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CR_KEY: "${{ secrets.CR_KEY }}" # Key name used while creating key
           CR_SIGN: true # Set to true to sign images
+          CR_SKIP_EXISTING: true
 
   linter-artifacthub:
     runs-on: ubuntu-latest
