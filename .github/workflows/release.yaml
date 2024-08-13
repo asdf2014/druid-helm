@@ -27,7 +27,6 @@ jobs:
         run: |
           helm dependency list charts/druid #shows the output of dependencies
           helm dependency list charts/druid 2> /dev/null | tail +2 | head -n -1 | awk '{ print "helm repo add " $1 " " $3 }' | while read cmd; do $cmd; done
-          helm dependency update charts/druid
       - name: Prepare GPG key # Prepares GPG fields to sign chart
         run: |
           gpg_dir=.cr-gpg
