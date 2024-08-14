@@ -1,0 +1,72 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+annotations:
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/links: |
+    - name: Upstream Project
+      url: https://github.com/apache/druid
+    - name: Chart Source
+      url: https://github.com/asdf2014/druid-helm
+    - name: Druid Blog in English
+      url: https://imply.io/resources/blog/
+    - name: Druid Blog in Chinese
+      url: https://yuzhouwan.com/posts/5845/
+  artifacthub.io/signKey: |-
+    fingerprint: A4521768456A60E88DBE8066139B25C1B5D1AD02
+    url: https://keybase.io/gwshopee
+apiVersion: v2
+appVersion: 30.0.0
+dependencies:
+- - condition: zookeeper.enabled
+  name: zookeeper
+  repository: https://charts.bitnami.com/bitnami
+  version: 13.4.10
+- - condition: mysql.enabled
+  name: mysql
+  repository: https://charts.helm.sh/stable
+  version: 1.6.4
+- - condition: postgresql.enabled
+  name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 15.2.8
+description: Apache Druid is a high performance real-time analytics database.
+home: https://druid.apache.org/
+icon: https://druid.apache.org/img/favicon.png
+keywords:
+- - bigdata
+- - database
+- - tsdb
+- - olap
+- - analytics
+maintainers:
+- - email: asdf2014@apache.org
+  name: Benedict Jin
+  url: https://yuzhouwan.com/
+- - email: fectrain@outlook.com
+  name: Sensor
+  url: https://github.com/fectrain
+name: druid
+sources:
+- - https://github.com/apache/druid
+- - https://github.com/asdf2014/druid-helm
+- - https://imply.io/resources/blog/
+- - https://yuzhouwan.com/posts/5845/
+version: 30.0.14
+
+...
+files:
+  druid-30.0.14.tgz: sha256:2fa2af5568d8caf17c49c64413c1a7881000f4d17f6085be80476ede9318100f
+-----BEGIN PGP SIGNATURE-----
+
+wsDcBAEBCgAQBQJmvH0TCRATmyXBtdGtAgAAwVkMAIuMDIqz5GQrOhDHcVz9nHkd
+wxJISG9qtolxkknJ2zzr6pppt0YndMo0uB1Q6ly9hfpAQUVJXIT3mcm2ntDBVbBM
+AbfNhqT/UNxA9m/SCRglQvHPqaD2A5wTdJ8sLf1vIurEpwSgM7d/JQ1c1x6Qy+/t
+J1A7UpXijNr47NZvroyMghl8SQgkH5Krr17qrwnvp9SfbCAQbwLzVNpECuvXfQW3
+IGHE0Sdgg8f0sjbTVNS6J9wE1c6e9IqvR6M+pPi8Qw0sc3phiWMlHwbuThVfkwl5
+RmiaoanxFATAmwzpfKnewhNiIagouBv8+OrM+6KlNccWdTYs4orrFR3EV1Dbr2dQ
+Pq/BG2yzCMGG6OKiQVEvQHrdPEdMEY2s2U0SJB0qei3mOMeZAlN2vwgaO/cbQ0I+
+oXKdTUBGJAi6NdFbEdVcoi38XsPXrZ1ifjEEhzrOqI1cNvWDeDrlY1NpHSMfGzOU
+4RTeGFryhMfhCmpF/Nq+5w7T69/H/T8oe/AleCOyRA==
+=lX3j
+-----END PGP SIGNATURE-----
