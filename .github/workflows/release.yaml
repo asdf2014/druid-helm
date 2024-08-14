@@ -46,7 +46,7 @@ jobs:
           # To add in after chart-releaser-action allows this:
           # skip_upload: true # Skips the index step.
           skip_existing: true # If left false, having a .tgz file in main repository will throw error.
-          packages_with_index: false
+          packages_with_index: true
           charts_dir: charts
           pages_branch: main
         env:
