@@ -56,8 +56,10 @@ jobs:
           mkdir -p releases/
           shopt -s nullglob
           files=(.cr-release-packages/druid-*)
+          # Move files to releases directory
           if [ ${#files[@]} -gt 0 ]; then
-            mv .cr-release-packages/druid-* releases/ #Move files to releases 
+            mv .cr-release-packages/druid-* releases/
+            helm repo index .
             git add index.yaml releases/druid-*
           else
             echo "No files starting with 'druid-' found in .cr-release-packages/"
