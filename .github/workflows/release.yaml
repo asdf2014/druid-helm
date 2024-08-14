@@ -57,7 +57,7 @@ jobs:
         run: |
           mkdir -p releases/
           shopt -s nullglob
-          files=(.cr-release-packages/druid-*)  
+          files=(.cr-release-packages/druid-*)
           # Move files to releases directory
           if [ ${#files[@]} -gt 0 ]; then
             mv .cr-release-packages/druid-* releases/
