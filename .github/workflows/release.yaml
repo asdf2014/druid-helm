@@ -53,8 +53,6 @@ jobs:
           CR_SKIP_EXISTING: true # If left false, having a .tgz file in main repository will throw error.
       - name: Clean-up and shift files to releases directory
         run: |
-          git pull origin main
-          
           mkdir -p releases/
           shopt -s nullglob
           files=(.cr-release-packages/druid-*)
@@ -65,6 +63,7 @@ jobs:
             echo "No files starting with 'druid-' found in .cr-release-packages/"
           fi
           
+          git pull origin main
           # Remove old druid-*.tgz files from the root directory if they exist
           tgz_files=(druid-*.tgz)
           if [ ${#tgz_files[@]} -gt 0 ]; then
@@ -82,9 +81,11 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Print directory tree for debug
+      - name: Download tree
         run: |
           sudo apt-get update && sudo apt-get install tree -y
+      - name: Print directory tree
+        run: |
           tree -a
 
   linter-artifacthub:
