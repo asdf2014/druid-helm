@@ -53,6 +53,8 @@ jobs:
           CR_SKIP_EXISTING: true # If left false, having a .tgz file in main repository will throw error.
       - name: Clean-up and shift files to releases directory
         run: |
+          git pull origin main
+          
           mkdir -p releases/
           shopt -s nullglob
           files=(.cr-release-packages/druid-*)
