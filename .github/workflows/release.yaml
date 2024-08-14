@@ -43,14 +43,16 @@ jobs:
       - name: Run chart-releaser # Generates new version of helm chart along with some file with extension .prov
         uses: helm/chart-releaser-action@v1.6.0
         with:
+          # To add in after chart-releaser-action allows this:
+          # skip_upload: true # Skips the index step.
+          skip_existing: true # If left false, having a .tgz file in main repository will throw error.
+          packages_with_index: true
           charts_dir: charts
           pages_branch: main
-          packages_with_index: true
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CR_KEY: "${{ secrets.CR_KEY }}" # Key name used while creating key
           CR_SIGN: true # Set to true to sign images
-          CR_SKIP_EXISTING: true # If left false, having a .tgz file in main repository will throw error.
       - name: Clean-up and shift files to releases directory
         run: |
           mkdir -p releases/
@@ -59,13 +61,14 @@ jobs:
           # Move files to releases directory
           if [ ${#files[@]} -gt 0 ]; then
             mv .cr-release-packages/druid-* releases/
+            git add releases/druid-*
+            git pull -X ours origin main  # To remove after chart-releaser-action allows skip_upload
             helm repo index .
-            git add index.yaml releases/druid-*
+            git add index.yaml
           else
             echo "No files starting with 'druid-' found in .cr-release-packages/"
           fi
-          
-          git pull origin main
+
           # Remove old druid-*.tgz files from the root directory if they exist
           tgz_files=(druid-*.tgz)
           if [ ${#tgz_files[@]} -gt 0 ]; then
@@ -73,7 +76,7 @@ jobs:
           else
             echo "No .tgz file to remove"
           fi
-          
+
           # Commit and push changes if any files were staged
           if git diff --cached --quiet; then
             echo "No changes to commit."
@@ -83,12 +86,6 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Download tree
-        run: |
-          sudo apt-get update && sudo apt-get install tree -y
-      - name: Print directory tree
-        run: |
-          tree -a
 
   linter-artifacthub:
     runs-on: ubuntu-latest
