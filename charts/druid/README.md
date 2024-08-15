@@ -28,7 +28,7 @@
 $ helm repo add druid-helm https://asdf2014.github.io/druid-helm/
 
 # Install chart
-$ helm install my-druid druid-helm/druid --version 30.0.15
+$ helm install my-druid druid-helm/druid --version 30.0.16
 ```
 
 
