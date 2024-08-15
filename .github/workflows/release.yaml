@@ -15,6 +15,9 @@ jobs:
         uses: actions/checkout@v4.1.1
         with:
           fetch-depth: 0
+      - name: Set timezone
+        run: |
+          sudo timedatectl set-timezone Asia/Singapore #Lets index.yaml use Singapore Time to trigger ArtifactHub scanning.
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
@@ -60,13 +63,12 @@ jobs:
           files=(.cr-release-packages/druid-*)
           # Move files to releases directory
           if [ ${#files[@]} -gt 0 ]; then
-            git stash
-            git pull -X ours origin main  # To remove after chart-releaser-action allows skip_upload
-            git stash pop
+            git restore index.yaml
+            git pull origin main  # To remove after chart-releaser-action allows skip_upload
             mv .cr-release-packages/druid-* releases/
-            git add releases/druid-*
+            git add releases/druid-* 
           else
-            echo "No files starting with 'druid-' found in .cr-release-packages/"
+            echo "New packages not found in .cr-release-packages/"
           fi
 
           # Remove old druid-*.tgz files from the root directory if they exist
