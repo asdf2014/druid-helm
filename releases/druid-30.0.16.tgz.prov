@@ -1,0 +1,72 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+annotations:
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/links: |
+    - name: Upstream Project
+      url: https://github.com/apache/druid
+    - name: Chart Source
+      url: https://github.com/asdf2014/druid-helm
+    - name: Druid Blog in English
+      url: https://imply.io/resources/blog/
+    - name: Druid Blog in Chinese
+      url: https://yuzhouwan.com/posts/5845/
+  artifacthub.io/signKey: |-
+    fingerprint: A4521768456A60E88DBE8066139B25C1B5D1AD02
+    url: https://keybase.io/gwshopee
+apiVersion: v2
+appVersion: 30.0.0
+dependencies:
+- - condition: zookeeper.enabled
+  name: zookeeper
+  repository: https://charts.bitnami.com/bitnami
+  version: 13.4.10
+- - condition: mysql.enabled
+  name: mysql
+  repository: https://charts.helm.sh/stable
+  version: 1.6.4
+- - condition: postgresql.enabled
+  name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 15.2.8
+description: Apache Druid is a high performance real-time analytics database.
+home: https://druid.apache.org/
+icon: https://druid.apache.org/img/favicon.png
+keywords:
+- - bigdata
+- - database
+- - tsdb
+- - olap
+- - analytics
+maintainers:
+- - email: asdf2014@apache.org
+  name: Benedict Jin
+  url: https://yuzhouwan.com/
+- - email: fectrain@outlook.com
+  name: Sensor
+  url: https://github.com/fectrain
+name: druid
+sources:
+- - https://github.com/apache/druid
+- - https://github.com/asdf2014/druid-helm
+- - https://imply.io/resources/blog/
+- - https://yuzhouwan.com/posts/5845/
+version: 30.0.16
+
+...
+files:
+  druid-30.0.16.tgz: sha256:fb456ac3ba8826a7e213b22b15f3acb648672fce4bee311619e2139c54d365ac
+-----BEGIN PGP SIGNATURE-----
+
+wsDcBAEBCgAQBQJmvafPCRATmyXBtdGtAgAAXqQMABvgZRoLjYMNBbP2WLLuQZCe
+1T3DlctL1eXcBfcNJ77uTE8m7AgQCKKygJH9mMj2CLpiKU09W4lFYm1CPUozttiv
+qOguZmG3EWG8pSbfhoV1bAdefCFRIMG96MusNB6mvZBYDsmd6Mpq64QhNbXrNhFN
+gZ6iZBXOdX6bC3HYfEF6n6SGvK8qVaijx95xZqvAJHOY0Et7Z2z6WOi7QA3a2kaT
+hYVpmQ5r8z5rxo0sBIfFCvwjwcfPAsJfI2V7FoAA++5t/90U+gURAgZlrbNZC9cP
+kkKxv5W/nnslfGHqB/Drd8bqUsZjAAJaVgbjPeBolJ4vJZpynCDl7gf/ZSY99AyA
+hWY2dPv6ANPgIs0cRL/KkGkyofwwP3XOFQ62e57nKHmPrk0xSCMEME+zXNp1RDql
+J1kqvHzoDj9ao/gJLsp76m4mE8W6/075eZ18Ocqky0AiyCRaD/+k7ZH/IKf/kyGt
+WQ8OTKPJD/BIgLwGLyNT+zWfQengzQ7I8IFaMsw9Vg==
+=d54p
+-----END PGP SIGNATURE-----
