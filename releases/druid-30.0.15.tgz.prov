@@ -1,0 +1,72 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+annotations:
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/links: |
+    - name: Upstream Project
+      url: https://github.com/apache/druid
+    - name: Chart Source
+      url: https://github.com/asdf2014/druid-helm
+    - name: Druid Blog in English
+      url: https://imply.io/resources/blog/
+    - name: Druid Blog in Chinese
+      url: https://yuzhouwan.com/posts/5845/
+  artifacthub.io/signKey: |-
+    fingerprint: A4521768456A60E88DBE8066139B25C1B5D1AD02
+    url: https://keybase.io/gwshopee
+apiVersion: v2
+appVersion: 30.0.0
+dependencies:
+- - condition: zookeeper.enabled
+  name: zookeeper
+  repository: https://charts.bitnami.com/bitnami
+  version: 13.4.10
+- - condition: mysql.enabled
+  name: mysql
+  repository: https://charts.helm.sh/stable
+  version: 1.6.4
+- - condition: postgresql.enabled
+  name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 15.2.8
+description: Apache Druid is a high performance real-time analytics database.
+home: https://druid.apache.org/
+icon: https://druid.apache.org/img/favicon.png
+keywords:
+- - bigdata
+- - database
+- - tsdb
+- - olap
+- - analytics
+maintainers:
+- - email: asdf2014@apache.org
+  name: Benedict Jin
+  url: https://yuzhouwan.com/
+- - email: fectrain@outlook.com
+  name: Sensor
+  url: https://github.com/fectrain
+name: druid
+sources:
+- - https://github.com/apache/druid
+- - https://github.com/asdf2014/druid-helm
+- - https://imply.io/resources/blog/
+- - https://yuzhouwan.com/posts/5845/
+version: 30.0.15
+
+...
+files:
+  druid-30.0.15.tgz: sha256:4feee07964d612f79a4722fe7ac4f5d5ace551a700411690b0fbc2135a83b6e9
+-----BEGIN PGP SIGNATURE-----
+
+wsDcBAEBCgAQBQJmvXseCRATmyXBtdGtAgAAvioMACbXRSGMgSpq08GD4FUWYbk3
+jyRNTXa/PjDJ/62cI8C8/obZm/zP2TSSX3ipVtD6EG4wAJhLi5MH+jwqvBY2dpki
+nHfKGxm7yAFjPU7hBoIIqAP3ZFJK/RKInczQ1A0+eiaC2wjKfpD4DwGO1WmpCiNC
+jhkDWykmGOhz7bR/PnG2YSP1e8ojnosP++vNhI0Z4OQVB1F036a+po1OmNE8JG2b
+Pbl5ESN/p4WAwAfYGSjvMlb75sLXRzNWyUqjyL4JSO+8u8f7DbVrehHJt0mCHTrr
+5jX1B7E8mNhxUtu80EhnCZm3fkkbkNBLkmfrhpyS5ux1a4rBe5Ni5VYXoh/SrxCs
+dB5Q+eAjwPL5bFxOEIZfwRfN5WGir469DkxMRIfBOr0Wsa07KOvWkrZFrKU4JfGk
+LiTfMldAY/u3Muvrj/1v1eOBP8GpHLhTIynuDQ4dGx8irc1YpmZIhgkfcU2b1SLI
+QoReWCTq7jSevzOIjQokTYOUXA2oYXMYhABkUSHiqQ==
+=kHhL
+-----END PGP SIGNATURE-----

@@ -17,7 +17,7 @@ entries:
         url: https://keybase.io/gwshopee
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T03:50:56.416276689Z"
+    created: "2024-08-15T03:50:57.600860314Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -55,7 +55,7 @@ entries:
     - https://imply.io/resources/blog/
     - https://yuzhouwan.com/posts/5845/
     urls:
-    - druid-30.0.15.tgz
+    - releases/druid-30.0.15.tgz
     version: 30.0.15
   - annotations:
       artifacthub.io/license: Apache-2.0
@@ -73,7 +73,7 @@ entries:
         url: https://keybase.io/gwshopee
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.079429+08:00"
+    created: "2024-08-15T03:50:57.591380393Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -129,7 +129,7 @@ entries:
         url: https://keybase.io/gwshopee
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.069799+08:00"
+    created: "2024-08-15T03:50:57.581892552Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -185,7 +185,7 @@ entries:
         url: https://keybase.io/gwshopee
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.148072+08:00"
+    created: "2024-08-15T03:50:57.668541953Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -241,7 +241,7 @@ entries:
         url: https://keybase.io/gwshopee
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.138479+08:00"
+    created: "2024-08-15T03:50:57.658978359Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -297,63 +297,7 @@ entries:
         url: https://keybase.io/gwshopee
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.128943+08:00"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://charts.bitnami.com/bitnami
-      version: 13.4.10
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://charts.helm.sh/stable
-      version: 1.6.4
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 15.2.8
-    description: Apache Druid is a high performance real-time analytics database.
-    digest: e8e2eb8ac653acdb980f448cb761c658cd371ae65c40bc95419c2163bf747d78
-    home: https://druid.apache.org/
-    icon: https://druid.apache.org/img/favicon.png
-    keywords:
-    - bigdata
-    - database
-    - tsdb
-    - olap
-    - analytics
-    maintainers:
-    - email: asdf2014@apache.org
-      name: Benedict Jin
-      url: https://yuzhouwan.com/
-    - email: fectrain@outlook.com
-      name: Sensor
-      url: https://github.com/fectrain
-    name: druid
-    sources:
-    - https://github.com/apache/druid
-    - https://github.com/asdf2014/druid-helm
-    - https://imply.io/resources/blog/
-    - https://yuzhouwan.com/posts/5845/
-    urls:
-    - releases/druid-30.0.7.tgz
-    version: 30.0.7
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Upstream Project
-          url: https://github.com/apache/druid
-        - name: Chart Source
-          url: https://github.com/asdf2014/druid-helm
-        - name: Druid Blog in English
-          url: https://imply.io/resources/blog/
-        - name: Druid Blog in Chinese
-          url: https://yuzhouwan.com/posts/5845/
-      artifacthub.io/signKey: |-
-        fingerprint: A4521768456A60E88DBE8066139B25C1B5D1AD02
-        url: https://keybase.io/gwshopee
-    apiVersion: v2
-    appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.119355+08:00"
+    created: "2024-08-15T03:50:57.639906689Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -404,9 +348,65 @@ entries:
           url: https://imply.io/resources/blog/
         - name: Druid Blog in Chinese
           url: https://yuzhouwan.com/posts/5845/
+      artifacthub.io/signKey: |-
+        fingerprint: A4521768456A60E88DBE8066139B25C1B5D1AD02
+        url: https://keybase.io/gwshopee
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.109797+08:00"
+    created: "2024-08-15T03:50:57.649442251Z"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.4.10
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.helm.sh/stable
+      version: 1.6.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.8
+    description: Apache Druid is a high performance real-time analytics database.
+    digest: e8e2eb8ac653acdb980f448cb761c658cd371ae65c40bc95419c2163bf747d78
+    home: https://druid.apache.org/
+    icon: https://druid.apache.org/img/favicon.png
+    keywords:
+    - bigdata
+    - database
+    - tsdb
+    - olap
+    - analytics
+    maintainers:
+    - email: asdf2014@apache.org
+      name: Benedict Jin
+      url: https://yuzhouwan.com/
+    - email: fectrain@outlook.com
+      name: Sensor
+      url: https://github.com/fectrain
+    name: druid
+    sources:
+    - https://github.com/apache/druid
+    - https://github.com/asdf2014/druid-helm
+    - https://imply.io/resources/blog/
+    - https://yuzhouwan.com/posts/5845/
+    urls:
+    - releases/druid-30.0.7.tgz
+    version: 30.0.7
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Upstream Project
+          url: https://github.com/apache/druid
+        - name: Chart Source
+          url: https://github.com/asdf2014/druid-helm
+        - name: Druid Blog in English
+          url: https://imply.io/resources/blog/
+        - name: Druid Blog in Chinese
+          url: https://yuzhouwan.com/posts/5845/
+    apiVersion: v2
+    appVersion: 30.0.0
+    created: "2024-08-15T03:50:57.630228922Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -459,7 +459,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.100128+08:00"
+    created: "2024-08-15T03:50:57.620657058Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -512,7 +512,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.089829+08:00"
+    created: "2024-08-15T03:50:57.610340129Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -565,7 +565,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.05939+08:00"
+    created: "2024-08-15T03:50:57.572452617Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -618,7 +618,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 30.0.0
-    created: "2024-08-15T10:43:51.049504+08:00"
+    created: "2024-08-15T03:50:57.562857806Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -671,7 +671,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:51.039304+08:00"
+    created: "2024-08-15T03:50:57.553367809Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -724,7 +724,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:51.028597+08:00"
+    created: "2024-08-15T03:50:57.543755347Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -777,7 +777,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:51.018742+08:00"
+    created: "2024-08-15T03:50:57.53420259Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -830,7 +830,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:51.009568+08:00"
+    created: "2024-08-15T03:50:57.524232127Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -883,7 +883,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:50.999597+08:00"
+    created: "2024-08-15T03:50:57.514841777Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -936,7 +936,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:50.98888+08:00"
+    created: "2024-08-15T03:50:57.505548691Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -989,7 +989,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:50.978457+08:00"
+    created: "2024-08-15T03:50:57.496355884Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1042,7 +1042,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:50.967793+08:00"
+    created: "2024-08-15T03:50:57.487047558Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1095,7 +1095,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:50.957851+08:00"
+    created: "2024-08-15T03:50:57.477696524Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1145,7 +1145,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.1
-    created: "2024-08-15T10:43:50.946589+08:00"
+    created: "2024-08-15T03:50:57.468098511Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1195,7 +1195,7 @@ entries:
           url: https://yuzhouwan.com/posts/5845/
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-08-15T10:43:50.93716+08:00"
+    created: "2024-08-15T03:50:57.458735186Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1241,7 +1241,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-08-15T10:43:50.926803+08:00"
+    created: "2024-08-15T03:50:57.448616837Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1283,7 +1283,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-08-15T10:43:50.917335+08:00"
+    created: "2024-08-15T03:50:57.438519538Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1325,7 +1325,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-08-15T10:43:50.909993+08:00"
+    created: "2024-08-15T03:50:57.432460312Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1367,7 +1367,7 @@ entries:
           url: https://github.com/asdf2014/druid-helm
     apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-08-15T10:43:50.901443+08:00"
+    created: "2024-08-15T03:50:57.425473723Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1402,7 +1402,7 @@ entries:
     version: 29.0.3
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-08-15T10:43:50.895766+08:00"
+    created: "2024-08-15T03:50:57.42038585Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1437,7 +1437,7 @@ entries:
     version: 29.0.2
   - apiVersion: v2
     appVersion: 29.0.0
-    created: "2024-08-15T10:43:50.888658+08:00"
+    created: "2024-08-15T03:50:57.414790225Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -1472,7 +1472,7 @@ entries:
   mysql:
   - apiVersion: v1
     appVersion: 5.7.30
-    created: "2024-08-15T10:43:50.872508+08:00"
+    created: "2024-08-15T03:50:57.402557279Z"
     description: Fast, reliable, scalable, and easy to use open-source relational
       database system.
     digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
@@ -1507,7 +1507,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 16.2.0
-    created: "2024-08-15T10:43:50.877874+08:00"
+    created: "2024-08-15T03:50:57.407687573Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1547,7 +1547,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.9.2
-    created: "2024-08-15T10:43:50.883157+08:00"
+    created: "2024-08-15T03:50:57.41029636Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1570,4 +1570,4 @@ entries:
     urls:
     - charts/zookeeper-13.4.10.tgz
     version: 13.4.10
-generated: "2024-08-15T03:50:56.416532867Z"
+generated: "2024-08-15T03:50:57.401661938Z"
