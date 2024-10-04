@@ -13,7 +13,7 @@
         },
         "tag": {
           "type": "string",
-          "default": "30.0.0",
+          "default": "30.0.1",
           "description": "container image tag"
         },
         "pullPolicy": {

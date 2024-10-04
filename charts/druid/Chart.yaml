@@ -15,8 +15,8 @@
 
 apiVersion: v2
 name: druid
-version: 30.0.16
-appVersion: 30.0.0
+version: 30.1.0
+appVersion: 30.0.1
 description: Apache Druid is a high performance real-time analytics database.
 keywords:
   - bigdata
