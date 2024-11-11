@@ -1,0 +1,72 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+annotations:
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/links: |
+    - name: Upstream Project
+      url: https://github.com/apache/druid
+    - name: Chart Source
+      url: https://github.com/asdf2014/druid-helm
+    - name: Druid Blog in English
+      url: https://imply.io/resources/blog/
+    - name: Druid Blog in Chinese
+      url: https://yuzhouwan.com/posts/5845/
+  artifacthub.io/signKey: |-
+    fingerprint: A4521768456A60E88DBE8066139B25C1B5D1AD02
+    url: https://keybase.io/gwshopee
+apiVersion: v2
+appVersion: 31.0.0
+dependencies:
+- - condition: zookeeper.enabled
+  name: zookeeper
+  repository: https://charts.bitnami.com/bitnami
+  version: 13.4.15
+- - condition: mysql.enabled
+  name: mysql
+  repository: https://charts.helm.sh/stable
+  version: 1.6.4
+- - condition: postgresql.enabled
+  name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 15.2.8
+description: Apache Druid is a high performance real-time analytics database.
+home: https://druid.apache.org/
+icon: https://druid.apache.org/img/favicon.png
+keywords:
+- - bigdata
+- - database
+- - tsdb
+- - olap
+- - analytics
+maintainers:
+- - email: asdf2014@apache.org
+  name: Benedict Jin
+  url: https://yuzhouwan.com/
+- - email: fectrain@outlook.com
+  name: Sensor
+  url: https://github.com/fectrain
+name: druid
+sources:
+- - https://github.com/apache/druid
+- - https://github.com/asdf2014/druid-helm
+- - https://imply.io/resources/blog/
+- - https://yuzhouwan.com/posts/5845/
+version: 31.0.3
+
+...
+files:
+  druid-31.0.3.tgz: sha256:adc40aa30dfed2922669f05e0753b2c15d8a9435655887e7a76b8b6757ad1eec
+-----BEGIN PGP SIGNATURE-----
+
+wsDcBAEBCgAQBQJnMXAPCRATmyXBtdGtAgAAxrMMAB6ZdLfAFDlAiRdF9gexnjum
+ZDOuUJL+f5rvwc4X3UF7T6ujnE/djeKrJBGPL0WoobJ97pkEQVaXq5BdPP4SRS8k
+1TrQYlXcFHNy2ND6NNxJNZzWd9yKDWoumapOd/S5zjdDlYJPzMUUo1/FWpqv6DSd
+qLeCXA4rjlK7X52U0/Hu0s5+/vOqH/Q7wD5gn7xN8TLF/jVApYFLDHZgwHbkvJX9
+cu+sLHzO/fwuRk2TXKZKGOxTr6IJPCb7TBw6TWAelOnMqNPMVCaBtH0hjMRemH/P
+X3tFLMjDd6MkyGCI0pBKUsnRd9FyNTFIxkj+Ip1ogF3wpA7t8epLw07Rys4I75Ul
+9Ka3r8WQMmd2E2uC3BUDZIFGp8Xh7zk80COEiwsXEAvQaimpv03fuH7TSndStYQh
+R65ZhZBnb6X8kDrDdgZMi4RIQo8rfw1UlkxO/yxnMWBdlTR8FdrANmkHpzb+AiTR
+TjxumqkLQSUJyUp08LF48KqQ8wEju8Rsp3hoynSC+g==
+=9cto
+-----END PGP SIGNATURE-----
