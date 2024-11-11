@@ -28,7 +28,7 @@
 $ helm repo add druid-helm https://asdf2014.github.io/druid-helm/
 
 # Install chart
-$ helm install my-druid druid-helm/druid --version 31.0.3
+$ helm install my-druid druid-helm/druid --version 31.0.4
 ```
 
 
@@ -294,3 +294,9 @@ The Chart provides ingress configuration to allow customization the installation
 ## Persistence
 
 MiddleManagers and Historicals use StatefulSet. Persistence has been enabled by default.
+
+
+
+# Thanks
+
+[![](https://opencollective.com/druid-helm/contributors.svg?width=666)](https://github.com/asdf2014/druid-helm/graphs/contributors)
