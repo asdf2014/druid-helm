@@ -40,6 +40,7 @@ In addition to the above method, also you can install this local Druid Helm Char
 First, you need update the dependencies:
 
 ```bash
+$ cd charts/druid/
 $ helm dependency update .
 ```
 
