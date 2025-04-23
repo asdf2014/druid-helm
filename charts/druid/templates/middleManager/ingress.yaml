@@ -36,6 +36,7 @@ metadata:
 {{ toYaml . | indent 4 }}
 {{- end }}
 spec:
+  ingressClassName: {{ .Values.middleManager.ingress.ingressClassName }}
 {{- if .Values.middleManager.ingress.tls }}
   tls:
   {{- range .Values.middleManager.ingress.tls }}

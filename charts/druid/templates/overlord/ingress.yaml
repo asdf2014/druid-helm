@@ -36,6 +36,7 @@ metadata:
 {{ toYaml . | indent 4 }}
 {{- end }}
 spec:
+  ingressClassName: {{ .Values.overlord.ingress.ingressClassName }}
 {{- if .Values.overlord.ingress.tls }}
   tls:
   {{- range .Values.overlord.ingress.tls }}
