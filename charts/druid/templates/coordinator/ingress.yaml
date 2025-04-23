@@ -20,7 +20,8 @@
 {{- if .Values.coordinator.ingress.enabled -}}
 {{- $fullName := include "druid.coordinator.fullname" . -}}
 {{- $ingressPath := .Values.coordinator.ingress.path -}}
-apiVersion: extensions/v1beta1
+{{- $ingressPathType := .Values.broker.ingress.pathType -}}
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
@@ -35,6 +36,7 @@ metadata:
 {{ toYaml . | indent 4 }}
 {{- end }}
 spec:
+  ingressClassName: {{ .Values.coordinator.ingress.ingressClassName }}
 {{- if .Values.coordinator.ingress.tls }}
   tls:
   {{- range .Values.coordinator.ingress.tls }}
@@ -51,8 +53,11 @@ spec:
       http:
         paths:
           - path: {{ $ingressPath }}
+            pathType: {{ $ingressPathType}}
             backend:
-              serviceName: {{ $fullName }}
-              servicePort: http
+              service:
+                name: {{ $fullName }}
+                port:
+                  name: http
   {{- end }}
 {{- end }}
