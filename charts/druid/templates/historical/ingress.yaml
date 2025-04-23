@@ -20,7 +20,8 @@
 {{- if .Values.historical.ingress.enabled -}}
 {{- $fullName := include "druid.historical.fullname" . -}}
 {{- $ingressPath := .Values.historical.ingress.path -}}
-apiVersion: extensions/v1beta1
+{{- $ingressPathType := .Values.broker.ingress.pathType -}}
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
@@ -51,8 +52,11 @@ spec:
       http:
         paths:
           - path: {{ $ingressPath }}
+            pathType: {{ $ingressPathType}}
             backend:
-              serviceName: {{ $fullName }}
-              servicePort: http
+              service:
+                name: {{ $fullName }}
+                port:
+                  name: http
   {{- end }}
 {{- end }}

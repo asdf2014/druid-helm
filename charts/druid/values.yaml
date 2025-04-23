@@ -80,6 +80,7 @@ broker:
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     path: /
+    pathType: Prefix
     hosts:
       - chart-example.local
     tls: []
@@ -135,6 +136,7 @@ coordinator:
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     path: /
+    pathType: Prefix
     hosts:
       - chart-example.local
     tls: []
@@ -187,6 +189,7 @@ overlord:
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     path: /
+    pathType: Prefix
     hosts:
       - chart-example.local
     tls: []
@@ -241,6 +244,7 @@ historical:
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     path: /
+    pathType: Prefix
     hosts:
       - chart-example.local
     tls: []
@@ -390,6 +394,7 @@ middleManager:
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     path: /
+    pathType: Prefix
     hosts:
       - chart-example.local
     tls: []
@@ -465,6 +470,7 @@ router:
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     path: /
+    pathType: Prefix
     hosts:
       - chart-example.local
     tls: []
