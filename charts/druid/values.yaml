@@ -367,7 +367,7 @@ middleManager:
     druid_indexer_fork_property_druid_processing_buffer_sizeBytes: '25000000'
 
   autoscaling:
-    enabled: false
+    enabled: true
     minReplicas: 2
     maxReplicas: 5
     metrics:
