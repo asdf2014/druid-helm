@@ -17,7 +17,7 @@
 
 image:
   repository: apache/druid
-  tag: 30.0.1
+  tag: 33.0.0-rc2
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -35,6 +35,7 @@ configVars:
   ## DRUID env vars. ref: https://github.com/apache/druid/blob/master/distribution/docker/druid.sh#L29
   # DRUID_LOG_LEVEL: "warn"
   # DRUID_LOG4J: <?xml version="1.0" encoding="UTF-8" ?><Configuration status="WARN"><Appenders><Console name="Console" target="SYSTEM_OUT"><PatternLayout pattern="%d{ISO8601} %p [%t] %c - %m%n"/></Console></Appenders><Loggers><Root level="info"><AppenderRef ref="Console"/></Root><Logger name="org.apache.druid.jetty.RequestLog" additivity="false" level="DEBUG"><AppenderRef ref="Console"/></Logger></Loggers></Configuration>
+  DRUID_SET_HOST_IP: "1"
   DRUID_USE_CONTAINER_IP: "true"
 
   ## Druid Common Configurations. ref: https://druid.apache.org/docs/latest/configuration/index.html#common-configurations

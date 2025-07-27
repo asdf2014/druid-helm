@@ -28,7 +28,7 @@
 $ helm repo add druid-helm https://asdf2014.github.io/druid-helm/
 
 # Install chart
-$ helm install my-druid druid-helm/druid --version 31.0.5
+$ helm install my-druid druid-helm/druid --version 33.0.0
 ```
 
 
@@ -73,7 +73,7 @@ The following table lists the configurable parameters of the Druid Helm Chart an
 | Parameter                  | Description                                          | Default        |
 | -------------------------- | ---------------------------------------------------- | -------------- |
 | `image.repository`         | container image name                                 | `apache/druid` |
-| `image.tag`                | container image tag                                  | `31.0.0`       |
+| `image.tag`                | container image tag                                  | `33.0.0`       |
 | `image.pullPolicy`         | container pull policy                                | `IfNotPresent` |
 | `image.pullSecrets`        | image pull secrets for private repository            | `[]`           |
 | `configMap.enabled`        | enable druid configuration as configmap              | `true`         |
