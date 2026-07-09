@@ -34,6 +34,17 @@ rules:
     resources:
       - pods
       - configmaps
+      - pods/log
+    verbs:
+      - '*'
+  # Needed when the coordinator acts as overlord (druid.coordinator.asOverlord.enabled)
+  # with the druid-kubernetes-overlord-extensions task runner, which manages peon Jobs
+  # through the Kubernetes API. Mirrors the dedicated overlord role; see
+  # https://druid.apache.org/docs/latest/development/extensions-contrib/k8s-jobs/#gotchas
+  - apiGroups:
+      - batch
+    resources:
+      - jobs
     verbs:
       - '*'
 {{- end }}
