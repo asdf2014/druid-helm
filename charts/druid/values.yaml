@@ -17,7 +17,7 @@
 
 image:
   repository: apache/druid
-  tag: 30.0.1
+  tag: 37.0.0
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -35,7 +35,11 @@ configVars:
   ## DRUID env vars. ref: https://github.com/apache/druid/blob/master/distribution/docker/druid.sh#L29
   # DRUID_LOG_LEVEL: "warn"
   # DRUID_LOG4J: <?xml version="1.0" encoding="UTF-8" ?><Configuration status="WARN"><Appenders><Console name="Console" target="SYSTEM_OUT"><PatternLayout pattern="%d{ISO8601} %p [%t] %c - %m%n"/></Console></Appenders><Loggers><Root level="info"><AppenderRef ref="Console"/></Root><Logger name="org.apache.druid.jetty.RequestLog" additivity="false" level="DEBUG"><AppenderRef ref="Console"/></Logger></Loggers></Configuration>
-  DRUID_USE_CONTAINER_IP: "true"
+  # Since Druid 33.0.0 the Docker entrypoint no longer sets druid.host to the container IP
+  # when running inside Kubernetes (apache/druid#17697). Most processes in this chart run as
+  # Deployments, whose pod hostnames are not resolvable in cluster DNS, so keep the previous
+  # IP-based announcement behaviour.
+  DRUID_SET_HOST_IP: "1"
 
   ## Druid Common Configurations. ref: https://druid.apache.org/docs/latest/configuration/index.html#common-configurations
   druid_extensions_loadList: '["druid-histogram", "druid-datasketches", "druid-lookups-cached-global", "postgresql-metadata-storage"]'
