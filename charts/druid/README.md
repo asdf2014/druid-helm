@@ -28,7 +28,7 @@
 $ helm repo add druid-helm https://asdf2014.github.io/druid-helm/
 
 # Install chart
-$ helm install my-druid druid-helm/druid --version 37.0.1
+$ helm install my-druid druid-helm/druid --version 37.0.2
 ```
 
 
@@ -264,7 +264,7 @@ The following table lists the configurable parameters of the Druid Helm Chart an
 | `postgresql.auth.username` | PostgreSQL username     | `druid` |
 | `postgresql.auth.password` | PostgreSQL password     | `druid` |
 | `postgresql.auth.database` | PostgreSQL database     | `druid` |
-| `postgresql.service.port`  | PostgreSQL service port | `5432`  |
+| `postgresql.service.port`  | PostgreSQL port used in the metadata connectURI (the subchart's actual port lives at `postgresql.primary.service.ports.postgresql`) | `5432`  |
 
 ### Prometheus
 
