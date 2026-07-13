@@ -32,7 +32,7 @@ rbac:
 
 ## Define the key value pairs in the configmap
 configVars:
-  ## DRUID env vars. ref: https://github.com/apache/druid/blob/master/distribution/docker/druid.sh#L29
+  ## DRUID env vars. ref: https://github.com/apache/druid/blob/master/distribution/docker/druid.sh
   # DRUID_LOG_LEVEL: "warn"
   # DRUID_LOG4J: <?xml version="1.0" encoding="UTF-8" ?><Configuration status="WARN"><Appenders><Console name="Console" target="SYSTEM_OUT"><PatternLayout pattern="%d{ISO8601} %p [%t] %c - %m%n"/></Console></Appenders><Loggers><Root level="info"><AppenderRef ref="Console"/></Root><Logger name="org.apache.druid.jetty.RequestLog" additivity="false" level="DEBUG"><AppenderRef ref="Console"/></Logger></Loggers></Configuration>
   # Since Druid 33.0.0 the Docker entrypoint no longer sets druid.host to the container IP
@@ -519,14 +519,14 @@ router:
 
 zookeeper:
   enabled: true
-  ## Environmental variables to set in ZooKeeper
-  ##
-  env:
-    ## The JVM heap size to allocate to ZooKeeper
-    ZK_HEAP_SIZE: "512M"
-  ## Configure ZooKeeper headless
-  headless:
-    publishNotReadyAddresses: true
+  ## ZooKeeper JVM heap size in MB, consumed by the Bitnami subchart. 1024 is the subchart
+  ## default and the value that has always been in effect here: the former
+  ## `env.ZK_HEAP_SIZE: 512M` stanza was a leftover from the old helm/stable ZooKeeper chart
+  ## and was silently ignored by the Bitnami one, so it is made explicit at 1024 rather than
+  ## "restored" to 512 to avoid changing the memory footprint of existing installs.
+  ## (Likewise, the Bitnami subchart publishes not-ready headless addresses by default, so
+  ## the former `headless.publishNotReadyAddresses: true` block was a no-op and is gone.)
+  heapSize: 1024
 
 # ------------------------------------------------------------------------------
 # MySQL:
@@ -553,6 +553,9 @@ postgresql:
     password: druid
     database: druid
   service:
+    # Only used by this chart to build the metadata-storage connectURI. Changing it does NOT
+    # move the Bitnami subchart's actual listening port (that lives at
+    # postgresql.primary.service.ports.postgresql); keep the two in sync if you change either.
     port: 5432
 
 # Secrets
