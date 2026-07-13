@@ -300,4 +300,4 @@ MiddleManagers and Historicals use StatefulSet. Persistence has been enabled by 
 
 # Thanks
 
-[![](https://opencollective.com/druid-helm/contributors.svg?width=666)](https://github.com/asdf2014/druid-helm/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=asdf2014/druid-helm)](https://github.com/asdf2014/druid-helm/graphs/contributors)
